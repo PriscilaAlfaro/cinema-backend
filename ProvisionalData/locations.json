@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "state": "Texas"
+    },
+    {
+        "id": 2,
+        "state": "New York"
+    },
+    {
+        "id": 3,
+        "state": "Nevada"
+    },
+    {
+        "id": 4,
+        "state": "Colorado"
+    },
+    {
+        "id": 5,
+        "state": "Dakota"
+    }
+]
