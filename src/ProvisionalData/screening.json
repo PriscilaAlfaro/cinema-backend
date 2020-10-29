@@ -3,19 +3,28 @@
     "location_id": 1,
     "dates": [
         {
-            "dateTime": "ISODate(2019-02-21T15:40:52.684Z)",
-            "seatAvailable": 20,
-            "price": 10
+            "dateTime": "2020-11-15T20:00:00.000",
+            "hours": [
+                "15:00",
+                "18:00",
+                "21:00"
+            ]
         },
         {
-            "dateTime": "ISODate(2019-02-21T15:40:52.684Z)",
-            "seatAvailable": 20,
-            "price": 10
+            "dateTime": "ISODate(2020-11-16T12:40:52.684Z)",
+            "hours": [
+                "15:00",
+                "18:00",
+                "21:00"
+            ]
         },
         {
-            "dateTime": "ISODate(2019-02-21T15:40:52.684Z)",
-            "seatAvailable": 20,
-            "price": 10
+            "dateTime": "ISODate(2020-11-16T12:40:52.684Z)",
+            "hours": [
+                "15:00",
+                "18:00",
+                "21:00"
+            ]
         }
     ]
 }

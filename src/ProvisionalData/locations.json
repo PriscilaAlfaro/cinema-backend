@@ -1,22 +1,17 @@
 [
     {
-        "id": 1,
-        "state": "Texas"
+        "location": "Stockholm"
     },
     {
-        "id": 2,
-        "state": "New York"
+        "location": "Malmö"
     },
     {
-        "id": 3,
-        "state": "Nevada"
+        "location": "Göteborg"
     },
     {
-        "id": 4,
-        "state": "Colorado"
+        "location": "Uppsala"
     },
     {
-        "id": 5,
-        "state": "Dakota"
+        "location": "Lund"
     }
 ]
