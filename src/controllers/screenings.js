@@ -3,13 +3,13 @@ const Screening = require('../models/screenings');
 
 const screeningRouter = express.Router();
 
-// get movies
+
 screeningRouter.get('/', async (req, res) => {
     try {
         const allScreening = await Screening.find();
         return res.json(allScreening);
     } catch (error) {
-        res.status(500).json({ message: message.error });
+        res.status(500).json({ message: error.message });
     }
 
 });
@@ -31,7 +31,7 @@ screeningRouter.post('/', async (req, res) => {
             .status(400)
             .json({ message: 'please include a dates array' });
     } catch (error) {
-        res.status(500).json({ message: error });
+        res.status(500).json({ message: error.message });
     }
 
 });

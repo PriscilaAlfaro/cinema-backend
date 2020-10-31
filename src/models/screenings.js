@@ -6,7 +6,9 @@ const ScreeningSchema = new mongoose.Schema({
     dates: [
         {
             date: { type: Date, required: true },
-            hours: [{ type: String, required: true }],
+            screening: [
+                { hour: { type: String, required: true } }
+            ],
         }],
 
 });

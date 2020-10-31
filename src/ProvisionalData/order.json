@@ -1,12 +1,20 @@
 {
     "name": "Katy Perry",
     "email": "kperry@gmail.com",
+    "location_id": "146863985",
     "location": "Stockholm",
+    "movie_id": "938520984h",
     "movie": "Tenet",
+    "date_id": "9377u520984h",
     "date": "15/11/2020",
-    "hour": "17:00",
+    "screening_id": "9wiuhkljh5",
+    "screening": "17:00",
     "price": 10,
-    "tickects": 2,
-    "Seat number": "5, 6",
-    "total": 20
+    "totalPrice": 20,
+    "seatNumber": [
+        5,
+        6
+    ],
+    "paymentReference": "ch_1HiCaI2eZvKYlo2CsnhbyVsJ",
+    "paymentStatus": "success"
 }

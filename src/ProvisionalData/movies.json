@@ -2,6 +2,7 @@
     {
         "title": "Nelly Rapp - Monsteragent",
         "director": "Amanda Adolfsson",
+        "actors": "Matilda Gross, Johan Rheborg, Marianne Mörck, Björn Gustafsson, Lily Wahlsteen",
         "rated": "Familj",
         "duration": "1 tim 32 min",
         "minimunAge": 11,
@@ -12,6 +13,7 @@
     {
         "title": "Trolls 2: Världsturnén",
         "director": "Walt Dohrn,David P. Smith",
+        "actors": null,
         "rated": "Familj",
         "duration": "1 tim 31 min",
         "minimunAge": 7,
@@ -22,6 +24,7 @@
     {
         "title": "Tenet",
         "director": "Christopher Nolan",
+        "actors": "John David Washington, Robert Pattinson, Aaron Taylor-Johnson, Kenneth Branagh, Elisabeth Debicki,Dimple Kapadia, Michael Caine, Clémence Poésy",
         "rated": "Action",
         "duration": "2 tim 30 min",
         "minimunAge": 15,
@@ -32,6 +35,7 @@
     {
         "title": "Honest Thief",
         "director": "Mark Williams",
+        "actors": "Liam Neeson, Kate Walsh, Jai Courtney",
         "rated": "Action",
         "duration": "1 tim 39 min",
         "minimunAge": 15,
@@ -42,6 +46,7 @@
     {
         "title": "Andra sidan",
         "director": "Tord Danielsson,Oskar Mellander",
+        "actors": "Dilan Gwyn, Linus Wahlgren",
         "rated": "Skräck",
         "duration": "1 tim 27 min",
         "minimunAge": 15,
@@ -52,6 +57,7 @@
     {
         "title": "Greenland",
         "director": "Ric Roman Waugh",
+        "actors": "Gerard Butler, Morena Baccarin, Scott Glenn",
         "rated": "Action, Thriller",
         "duration": "2 tim 15 min",
         "minimunAge": 15,
@@ -62,6 +68,7 @@
     {
         "title": "After we collided",
         "director": "Roger Kumble",
+        "actors": "Josephine Langford, Hero Fiennes Tiffin, Dylan Sprouse",
         "rated": "Romance, Drama",
         "duration": "1 tim 45 min",
         "minimunAge": 11,

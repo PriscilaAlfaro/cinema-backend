@@ -1,17 +1,17 @@
 [
     {
-        "location": "Stockholm"
+        "location": "Stockholm",
+        "price": 10,
+        "totalSeats": 25
     },
     {
-        "location": "Malmö"
+        "location": "Malmö",
+        "price": 10,
+        "totalSeats": 25
     },
     {
-        "location": "Göteborg"
-    },
-    {
-        "location": "Uppsala"
-    },
-    {
-        "location": "Lund"
+        "location": "Göteborg",
+        "price": 10,
+        "totalSeats": 25
     }
 ]
