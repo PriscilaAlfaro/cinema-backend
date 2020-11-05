@@ -2,8 +2,7 @@ const express = require('express');
 const Order = require('../models/order');
 const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-const Stripe = require('stripe');
-const stripe = Stripe(process.env.STRIPE_API_KEY);
+
 
 const orderRouter = express.Router();
 
