@@ -40,7 +40,7 @@ seatAvailabilityRouter.patch('/:seatAvalabilityId', async (req, res) => {
             const purchasedSeatsfromDB = await SeatAvailability.findOne({ _id: req.params.seatAvalabilityId });
 
             if (purchasedSeatsfromDB.purchasedSeats.some(seat => purchasedSeats.includes(seat))) {
-                return res.json("The seats has been already purchased")
+                return res.status(400).json("The seats has been already purchased")
             } else {
 
                 const updatedPurchasedSeats = [...purchasedSeatsfromDB.purchasedSeats, ...purchasedSeats];
