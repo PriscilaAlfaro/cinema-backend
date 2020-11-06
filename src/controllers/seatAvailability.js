@@ -44,7 +44,6 @@ seatAvailabilityRouter.patch('/:seatAvalabilityId', async (req, res) => {
             } else {
 
                 const updatedPurchasedSeats = [...purchasedSeatsfromDB.purchasedSeats, ...purchasedSeats];
-
                 await SeatAvailability.updateOne(
                     { _id: req.params.seatAvalabilityId },
                     { $set: { purchasedSeats: updatedPurchasedSeats } }

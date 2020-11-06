@@ -1,5 +1,6 @@
 const express = require('express');
 const Order = require('../models/order');
+const SeatAvailability = require('../models/seatAvailability');
 const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
@@ -18,6 +19,52 @@ orderRouter.get('/:orderId', async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 
+});
+
+orderRouter.patch('/:sessionId', async (req, res) => {
+    const { newPaymentStatus } = req.body;
+
+    try {
+        const order = await Order.findOne({ paymentReference: req.params.sessionId });
+        if (!order) {
+            res.status(404).json({ message: 'order does not exist' });
+        } else {
+            const updateOrder = await Order.updateOne(
+                { _id: order._id },
+                { $set: { paymentStatus: newPaymentStatus } }
+            )
+            console.log("updateOrder", updateOrder)
+            order.paymentStatus = newPaymentStatus
+            res.send({ order: order });
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+//Here I need delete order and seats selected in SeatAvailability Collection
+orderRouter.delete('/:sessionId', async (req, res) => {
+    try {
+        const order = await Order.findOne({ paymentReference: req.params.sessionId });
+        const seatsfromDB = await SeatAvailability.findOne({ screening_id: order.screening_id });
+        const userSelectedSeats = order.seatNumber;
+        if (!order) {
+            res.status(404).json({ message: 'order does not exist' });
+        } else {
+            await Order.deleteOne({ _id: order._id });
+            if (seatsfromDB.purchasedSeats.some(seat => userSelectedSeats.includes(seat))) {
+                const finalSeats = seatsfromDB.purchasedSeats.filter(seatFromDB => !userSelectedSeats.includes(seatFromDB));
+
+                await SeatAvailability.updateOne(
+                    { _id: seatsfromDB._id },
+                    { $set: { purchasedSeats: finalSeats } }
+                )
+            }
+            return res.status(204).send({ _id: order._id });
+        }
+    } catch (error) {
+        return res.status(500).send({ message: error.message });
+    }
 });
 
 
@@ -112,5 +159,8 @@ orderRouter.post('/', async (req, res) => {
     }
 
 });
+
+
+
 
 module.exports = orderRouter;

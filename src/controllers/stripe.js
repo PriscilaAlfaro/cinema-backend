@@ -20,7 +20,7 @@ stripeRouter.get("/key", (req, res) => {
 
 
 stripeRouter.post('/create-checkout-session', async (req, res) => {
-    const { product, price, amount } = req.body;
+    const { product, price, amount, email } = req.body;
     try {
         if (product && price && amount) {
             const session = await stripe.checkout.sessions.create({
@@ -38,8 +38,9 @@ stripeRouter.post('/create-checkout-session', async (req, res) => {
                     },
                 ],
                 mode: 'payment',
-                success_url: 'http://localhost:3000/thanks?session_id={CHECKOUT_SESSION_ID}"',
-                cancel_url: 'http://localhost:3000/cancelled',
+                success_url: 'http://localhost:3000/thanks?session_id={CHECKOUT_SESSION_ID}',
+                cancel_url: 'http://localhost:3000/cancelled?session_id={CHECKOUT_SESSION_ID}',
+                customerEmail: email,
             });
 
             res.json({ id: session.id });
