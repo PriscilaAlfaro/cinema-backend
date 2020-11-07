@@ -6,6 +6,7 @@
         "rated": "Familj",
         "duration": "1 tim 32 min",
         "minimunAge": 11,
+        "poster": "https://image.tmdb.org/t/p/original/4LuJCO1edIbLVGx99uv7luDoIJt.jpg",
         "video": "https://www.youtube.com/embed/Z7LQTZnaSzk",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/4fcc013a61e04db3888f03f187b0c6b7.jpg?width=240&version=1C7CCC78AD4FC41C08AB456DF0A59168&format=webp",
         "description": "Nelly och hennes hund London ska tillbringa höstlovet hos sin morbror Hannibal. Men det visar sig att Hannibal inte lever det lugna liv som hon trott – han är en monsteragent! Nelly är snart omgiven av vampyrer, spöken, varulvar och Frankensteinare och dras in i ett gastkramande äventyr där allt hon tidigare trott på sätts på prov."
@@ -17,7 +18,8 @@
         "rated": "Familj",
         "duration": "1 tim 31 min",
         "minimunAge": 7,
-        "video": "https://www.youtube.com/watch?v=P9A6hOg9QQ0",
+        "poster": "https://miro.medium.com/max/5760/1*A0tzaUmQLj_bHW_sy-vnRQ.jpeg",
+        "video": "https://www.youtube.com/embed/P9A6hOg9QQ0",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/68bfeef55ada4e7ab0606db2af0f40ad.jpg?width=240&version=EA2E80EE161E5DA161C6E26487054C9F&format=webp",
         "description": "Poppy och Kvist ger sig ut på ett äventyr som kommer att föra dem långt bortom den verklighet de förut känt till. Under resans gång kommer de att upptäcka att de tillhör bara ett av de sex olika sorters trollfolk som bor utspridda över sex olika länder och som är hängivna sex olika sorters musik: Funk, Country, Techno, Klassiskt, Pop och Rock. Deras värld kommer att bli väldigt mycket större, och väldigt mycket högljuddare, än förut. En medlem av hårdrockens kungafamilj, drottning Barb, vill, med hjälp av sin far kung Thrash, förgöra alla andra sorters musik så att hårdrocken ensam kan regera. Världens öde står på spel och Poppy, Kvist, Biggie, Chenille, Satin, Cooper och Guy Diamond ger sig iväg så att de tillsammans kan hindra Barb från att ta över hela scenen."
     },
@@ -28,7 +30,8 @@
         "rated": "Action",
         "duration": "2 tim 30 min",
         "minimunAge": 15,
-        "video": "https://www.youtube.com/watch?v=L3pk_TBkihU",
+        "poster": "https://miro.medium.com/max/7680/1*rPh_zbqkfcPeq65rEUfM0w.jpeg",
+        "video": "https://www.youtube.com/embed/L3pk_TBkihU",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/30f92cc5903648b79d4cecc3e96e5e97.jpg?width=240&version=F441983B8A4DF762178264DDB8A24AE0&format=webp",
         "description": "Christopher Nolans 'Tenet' är en episk actionfilm som tar sitt avstamp i den internationella spionvärlden. John David Washington spelar huvudrollen som protagonisten i Christopher Nolans nya actionfilm ”Tenet.” I en skuggvärld av spionage på hög internationell nivå är ordet Tenet det enda redskap han har för att rädda mänskligheten. Hans mål utvecklas under det att uppdraget utförs. Bortom tiden. Inte tidsresor. Inversion. Nolan har skrivit och regisserat filmen och har använt sig av en mix av IMAX och 70mm för att ge historien liv på bioduken. 'Tenet' har spelats in på plats i sju länder världen över, bland annat i Italien, Indien, Norge, Estland, Danmark, England och USA. Förutom John David Washington ser vi Robert Pattinson, Elizabeth Debicki, Dimple Kapadia, Aaron Taylor-Johnson, Clémence Poésy, Michael Caine och Kenneth Branagh."
     },
@@ -39,7 +42,8 @@
         "rated": "Action",
         "duration": "1 tim 39 min",
         "minimunAge": 15,
-        "video": "https://www.youtube.com/watch?v=_TLtcw7ixRc",
+        "poster": "https://catalog.cinema-api.com/cf/images/ncg-images/d410d62ff4ef452db5b54352b8d43a4e.jpg?width=1920&version=6A11ABAD3CA0D8CE9B8BFC057BD1E2F0",
+        "video": "https://www.youtube.com/embed/_TLtcw7ixRc",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/1babd367d22c42468c987f48f8a56187.jpg?width=240&version=4B6EF668142FCF8AA8546A0CA82D6A3C&format=webp",
         "description": "Liam Neeson är bankrånaren Tom Carter, som länge gäckat polisen med sina smarta kassaskåpskupper. När han plötsligt träffar kvinnan i sitt liv tar han beslutet att lämna över sig själv och alla stulna miljoner till polisen. Målet är att få en deal om kortare strafftid för sedan kunna börja ett nytt liv på allvar. Men Tom inser snart att polisen är mer korrupt än han själv, och för att rentvå sitt namn måste han slå tillbaka."
     },
@@ -50,7 +54,8 @@
         "rated": "Skräck",
         "duration": "1 tim 27 min",
         "minimunAge": 15,
-        "video": "https://www.youtube.com/watch?v=EN4ICCu8SJI",
+        "poster": "https://cached-images.bonnier.news/swift/bilder/mly/e8af592e-f024-498a-b6b9-4de568f1a8d4.jpeg",
+        "video": "https://www.youtube.com/embed/EN4ICCu8SJI",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/bf98a74743b843d18a6ea886c718410a.jpg?width=240&version=680CCA61786CAD6E21CB87E5EA110E6F&format=webp",
         "description": "Shirin har just flyttat till ett parhus utanför stan med sin sambo Fredrik och hans son, Lucas. När Fredrik är bortrest på jobb börjar märkliga ljud komma från husets andra, obebodda, del. Och Lucas har från ingenstans fått en ny bästa vän..."
     },
@@ -61,7 +66,8 @@
         "rated": "Action, Thriller",
         "duration": "2 tim 15 min",
         "minimunAge": 15,
-        "video": "https://www.youtube.com/watch?v=vz-gdEL_ae8",
+        "poster": "https://img.over-blog-kiwi.com/5/58/52/71/20200806/ob_c0fa12_t4t4d3rkuumzsdk8f83crlbijzc.jpg",
+        "video": "https://www.youtube.com/embed/vz-gdEL_ae8",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/a31436420a544e09bf6aae299cf1544c.jpg?width=240&version=0EE8C92BD1060CD3E64FFF40E1C66E3B&format=webp",
         "description": "Familjen Garrity kämpar för att överleva samtidigt som en dödlig komet är på väg mot jorden. John, hans fru Allison och deras lilla son Nathan gör en riskfylld resa för att ta sig till en säker plats. När världen nås av skrämmande nyheter om kometens dödliga framfart upplever familjen Garrity både det bästa och värsta hos mänskligheten samtidigt som de kämpar mot den ökade paniken och laglösheten runt omkring dem. Nedräkningen till den globala apokalypsen närmar sig och familjens desperata flykt kulminerar i ett sista-minuten-flyg till en möjlig fristad."
     },
@@ -72,7 +78,8 @@
         "rated": "Romance, Drama",
         "duration": "1 tim 45 min",
         "minimunAge": 11,
-        "video": "https://www.youtube.com/watch?v=ndyVh4GFMw0",
+        "poster": "https://decider.com/wp-content/uploads/2020/07/After-Movie-.jpg?quality=80&strip=all",
+        "video": "https://www.youtube.com/embed/ndyVh4GFMw0",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/af43a0ff2f91418aa4eec5428d16fc3e.jpg?width=240&version=91366B855670F94E48E7BFFB7EA1CE27&format=webp",
         "description": "Hardin Scott and Tessa Young go through the aftermath of their breakup. While Hardin falls into bad habits, Tessa is filled with new self-confidence and lands her dream internship at the publisher Vance. At her new workplace, she pays attention to her handsome new co-worker Trevor, who is exactly the kind of guy she should be with. He is smart, funny, handsome and responsible, but Tessa can not get Hardin out of her head. He's still the love of her life. Despite all their misunderstandings and difficulties, Tessa can not deny the attraction she has to Hardin. She wishes she could stay away ... it's just not that easy. Through all the ups and downs, Hardin and Tessa will fight to be together ... even if the universe wants them to be apart."
     }

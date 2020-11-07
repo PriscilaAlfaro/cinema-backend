@@ -2,16 +2,19 @@
     {
         "location": "Stockholm",
         "price": 10,
-        "totalSeats": 25
+        "totalSeats": 25,
+        "salong": 1
     },
     {
         "location": "Malmö",
         "price": 10,
-        "totalSeats": 25
+        "totalSeats": 25,
+        "salong": 1
     },
     {
         "location": "Göteborg",
         "price": 10,
-        "totalSeats": 25
+        "totalSeats": 25,
+        "salong": 1
     }
 ]
