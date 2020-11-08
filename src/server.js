@@ -1,7 +1,10 @@
+/* eslint-disable no-console */
 const express = require('express');
-const { connect } = require('./config/database');
-const app = express();
 const cors = require('cors');
+const { connect } = require('./config/database');
+
+const app = express();
+
 module.exports = app;
 
 const PORT = process.env.PORT || 4001;
@@ -9,7 +12,6 @@ const PORT = process.env.PORT || 4001;
 app.use(express.json());
 
 app.use(cors());
-
 
 const movies = require('./controllers/movies');
 const locations = require('./controllers/locations');
@@ -29,5 +31,3 @@ app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
 connect();
-
-
