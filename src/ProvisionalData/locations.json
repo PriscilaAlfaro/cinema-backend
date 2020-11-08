@@ -3,18 +3,24 @@
         "location": "Stockholm",
         "price": 10,
         "totalSeats": 25,
-        "salong": 1
+        "salong": 1,
+        "place": "Mall of Scandinavia",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2032.8304870547397!2d18.003176316284286!3d59.36916798167282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9dc632e678ff%3A0x4bb453ffd468743e!2sMall%20of%20Scandinavia!5e0!3m2!1sen!2sse!4v1604833710731!5m2!1sen!2sse"
     },
     {
         "location": "Malmö",
         "price": 10,
         "totalSeats": 25,
-        "salong": 1
+        "salong": 1,
+        "place": "Emporia Shopping Center",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2256.15819152602!2d12.971144516156674!3d55.56444438050328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a12b16740137%3A0x696545bf13142c2f!2sEmporia%20Shopping%20Center!5e0!3m2!1sen!2sse!4v1604833606859!5m2!1sen!2sse"
     },
     {
         "location": "Göteborg",
         "price": 10,
         "totalSeats": 25,
-        "salong": 1
+        "salong": 1,
+        "place": "Nordstan",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68202.9592152826!2d11.919165771747577!3d57.71064014152324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff363f5374bcb%3A0xfc7ac7ea2ddb942!2sNordstan!5e0!3m2!1sen!2sse!4v1604833860799!5m2!1sen!2sse"
     }
 ]
