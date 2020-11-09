@@ -20,6 +20,7 @@ moviesRouter.post('/', async (req, res) => {
     rated,
     duration,
     minimunAge,
+    poster,
     video,
     image,
     description,
@@ -32,6 +33,7 @@ moviesRouter.post('/', async (req, res) => {
         && rated
         && duration
         && minimunAge
+        && poster
         && video
         && image
         && description)
@@ -43,6 +45,7 @@ moviesRouter.post('/', async (req, res) => {
         rated,
         duration,
         minimunAge,
+        poster,
         video,
         image,
         description,
@@ -52,7 +55,7 @@ moviesRouter.post('/', async (req, res) => {
     }
     return res.status(400).json({
       message:
-        'please include title, director, actors, rated, duration, minimunAge, video, image, description, actors',
+        'please include title, director, actors, rated {sv, es}, duration, minimunAge, video, poster, image, description: {sv, es}, actors',
     });
   } catch (error) {
     return res.status(500).json({ message: error.message });
