@@ -8,6 +8,72 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const orderRouter = express.Router();
 
+const buildEmailContent = (name, movie, location, place, salong, date, screening, seatNumber, totalPrice) => `<html lang="en">
+            <head>
+             <title>Ticket details</title>
+           </head >
+            <body>
+              <h2 style="font-size: 1.5em; color: white; background-color: rgb(39, 7, 90); padding: 20px; margin: 0px">Cinema CR
+              </h2>
+              <h2>Hi ${name}</h2>
+               <h3> You can find details about your purchase in Cinema CR here:</h2>
+               <h2>Ticket details</h2>
+                 <hr />
+                   <div>
+                      <div style="text-align: center;">
+                                  <table style="background-color: rgb(175, 168, 235); border-spacing: 0;">
+                                      <tbody style="font-size: 1em; padding: 20px">
+                                          <tr>
+                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Movie</strong>
+                                              </td>
+                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Location</strong>
+                                              </td>
+                                               <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Place</strong>
+                                              </td>
+                                               <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Salong</strong>
+                                              </td>
+                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Date</strong>
+                                              </td>
+                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Hour</strong>
+                                              </td>
+                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Tickets</strong>
+                                              </td>
+                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Seats</strong>
+                                              </td>
+                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                                  <strong>Total</strong>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td style="justify-content: center;">${movie}</td>
+                                              <td style="justify-content: center; ">${location}</td>
+                                              <td style="justify-content: center; ">${place}</td>
+                                              <td style="justify-content: center; ">${salong}</td>
+                                              <td style="justify-content: center;">${date}</td>
+                                              <td style="justify-content: center; ">${screening}</td>
+                                              <td style="justify-content: center; ">${screening.length}</td>
+                                              <td style="justify-content: center; ">${seatNumber}</td>
+                                              <td style="justify-content: center; ">${totalPrice}</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                          <h5>If you any problem with your purchase please write to cinema_cr@outlook.com</h5>
+                          <h3>Thanks for your purchase in Cinema CR!</h3>
+                          <h2>Enjoy your movie!</h2>
+                          <hr/>
+                      </body>
+                     </html >`;
+
 orderRouter.get('/:orderId', async (req, res) => {
   try {
     const order = await Order.findOne({ _id: req.params.orderId });
@@ -50,6 +116,8 @@ orderRouter.post('/', async (req, res) => {
     email,
     location_id,
     location,
+    place,
+    salong,
     movie_id,
     movie,
     date_id,
@@ -69,6 +137,8 @@ orderRouter.post('/', async (req, res) => {
       && email
       && location_id
       && location
+      && place
+      && salong
       && movie_id
       && movie
       && date_id
@@ -84,68 +154,11 @@ orderRouter.post('/', async (req, res) => {
       // sengrid-------------------------
       const msg = {
         to: email,
-        from: 'priscilahistoria@gmail.com', // Change to your verified sender
+        from: 'priscilahistoria@gmail.com',
         subject: 'Cinema CR Tickets',
         text: 'Ticket details',
-        html: `<html lang="en">
-
-                          <head head >
-                          <title>Ticket details</title>
-      </head >
-
-                      <body>
-                          <h2 style="font-size: 1.5em; color: white; background-color: rgb(39, 7, 90); padding: 20px; margin: 0px">Cinema CR
-          </h2>
-                          <h2>Hi ${name}</h2>
-                          <h3> You can find details about your purchase in Cinema CR here:</h2>
-                          <h2>Ticket details</h2>
-                          <hr />
-                          <div>
-
-                              <div style="text-align: center;">
-                                  <table style="background-color: rgb(175, 168, 235); border-spacing: 0;">
-                                      <tbody style="font-size: 1em; padding: 20px">
-                                          <tr>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Movie</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Location</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Date</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Hour</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Tickets</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Seats</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Total</strong>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td style="justify-content: center;">${movie}</td>
-                                              <td style="justify-content: center; ">${location}</td>
-                                              <td style="justify-content: center;">${date}</td>
-                                              <td style="justify-content: center; ">${screening}</td>
-                                              <td style="justify-content: center; ">${screening.length}</td>
-                                              <td style="justify-content: center; ">${seatNumber}</td>
-                                              <td style="justify-content: center; ">${totalPrice}</td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
-                              </div>
-                          </div>
-                          <h3>Enjoy your movie!.</h3>
-                          <hr />
-                      </body>
-
-                     </html >`,
+        // eslint-disable-next-line max-len
+        html: buildEmailContent(name, movie, location, place, salong, date, screening, seatNumber, totalPrice),
       };
       sgMail.send(msg).then((r) => {
         console.log('Email sent', r);
@@ -157,6 +170,8 @@ orderRouter.post('/', async (req, res) => {
         email,
         location_id,
         location,
+        place,
+        salong,
         movie_id,
         movie,
         date_id,

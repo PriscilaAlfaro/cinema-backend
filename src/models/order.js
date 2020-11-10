@@ -5,6 +5,8 @@ const OrderSchema = new mongoose.Schema({
   email: { type: String, required: true },
   location_id: { type: mongoose.ObjectId, required: true },
   location: { type: String, required: true },
+  place: { type: String, required: true },
+  salong: { type: String, required: true },
   movie_id: { type: mongoose.ObjectId, required: true },
   movie: { type: String, required: true },
   date_id: { type: mongoose.ObjectId, required: true },
