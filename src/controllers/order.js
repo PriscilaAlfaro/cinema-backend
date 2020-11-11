@@ -34,7 +34,7 @@ const buildEmailContent = (name, movie, location, place, salong, date, screening
                                                   <strong>Place</strong>
                                               </td>
                                                <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Salong</strong>
+                                                  <strong>Screen</strong>
                                               </td>
                                               <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
                                                   <strong>Date</strong>
@@ -59,7 +59,7 @@ const buildEmailContent = (name, movie, location, place, salong, date, screening
                                               <td style="justify-content: center; ">${salong}</td>
                                               <td style="justify-content: center;">${date}</td>
                                               <td style="justify-content: center; ">${screening}</td>
-                                              <td style="justify-content: center; ">${screening.length}</td>
+                                              <td style="justify-content: center; ">${seatNumber.length}</td>
                                               <td style="justify-content: center; ">${seatNumber}</td>
                                               <td style="justify-content: center; ">${totalPrice}</td>
                                           </tr>
