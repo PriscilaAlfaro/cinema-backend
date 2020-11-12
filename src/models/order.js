@@ -18,6 +18,7 @@ const OrderSchema = new mongoose.Schema({
   seatNumber: [{ type: Number, required: true }],
   paymentReference: { type: String, required: true },
   paymentStatus: { type: String, required: true },
+  purchaseDate: { type: Date, required: true },
 });
 
 module.exports = mongoose.model('Order', OrderSchema);

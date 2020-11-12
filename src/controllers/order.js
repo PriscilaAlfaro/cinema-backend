@@ -8,11 +8,11 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const orderRouter = express.Router();
 
-const buildEmailContent = (name, movie, location, place, salong, date, screening, seatNumber, totalPrice) => `<html lang="en">
+const buildEmailContent = (name, movie, location, place, salong, date, screening, seatNumber, totalPrice, paymentStatus) => `<html lang="en">
             <head>
              <title>Ticket details</title>
            </head >
-            <body>
+            <body> 
               <h2 style="font-size: 1.5em; color: white; background-color: rgb(39, 7, 90); padding: 20px; margin: 0px">Cinema CR
               </h2>
               <h2>Hi ${name}</h2>
@@ -34,7 +34,7 @@ const buildEmailContent = (name, movie, location, place, salong, date, screening
                                                   <strong>Place</strong>
                                               </td>
                                                <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Screen</strong>
+                                                  <strong>Cinema room</strong>
                                               </td>
                                               <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
                                                   <strong>Date</strong>
@@ -46,11 +46,12 @@ const buildEmailContent = (name, movie, location, place, salong, date, screening
                                                   <strong>Tickets</strong>
                                               </td>
                                               <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Seats</strong>
+                                                  <strong>Seat Number</strong>
                                               </td>
                                               <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
                                                   <strong>Total</strong>
                                               </td>
+                                           
                                           </tr>
                                           <tr>
                                               <td style="justify-content: center;">${movie}</td>
@@ -61,13 +62,14 @@ const buildEmailContent = (name, movie, location, place, salong, date, screening
                                               <td style="justify-content: center; ">${screening}</td>
                                               <td style="justify-content: center; ">${seatNumber.length}</td>
                                               <td style="justify-content: center; ">${seatNumber}</td>
-                                              <td style="justify-content: center; ">${totalPrice}</td>
+                                              <td style="justify-content: center; ">${totalPrice} kr</td>
+                                              
                                           </tr>
                                       </tbody>
                                   </table>
                               </div>
                           </div>
-                          <h5>If you any problem with your purchase please write to cinema_cr@outlook.com</h5>
+                          <h5>If you have any problem with your purchase please write to cinema_cr@outlook.com</h5>
                           <h3>Thanks for your purchase in Cinema CR!</h3>
                           <h2>Enjoy your movie!</h2>
                           <hr/>
@@ -129,6 +131,7 @@ orderRouter.post('/', async (req, res) => {
     seatNumber,
     paymentReference,
     paymentStatus,
+    purchaseDate
   } = req.body;
 
   try {
@@ -150,6 +153,7 @@ orderRouter.post('/', async (req, res) => {
       && seatNumber
       && paymentReference
       && paymentStatus
+      && purchaseDate
     ) {
       // sengrid-------------------------
       const msg = {
@@ -158,11 +162,12 @@ orderRouter.post('/', async (req, res) => {
         subject: 'Cinema CR Tickets',
         text: 'Ticket details',
         // eslint-disable-next-line max-len
-        html: buildEmailContent(name, movie, location, place, salong, date, screening, seatNumber, totalPrice),
+        html: buildEmailContent(name, movie, location, place, salong, date, screening, seatNumber, totalPrice, purchaseDate),
       };
       sgMail.send(msg).then((r) => {
         console.log('Email sent', r);
       });
+
       // data base ------------------------
 
       const order = new Order({
@@ -183,20 +188,21 @@ orderRouter.post('/', async (req, res) => {
         seatNumber,
         paymentReference,
         paymentStatus,
+        purchaseDate
       });
       await order.save();
       return res.json(order);
     }
     return res.status(400).json({
       message:
-        'please include name, email, location_id, location, movie_id, movie, date_id, date, screening_id, screening, price,totalPrice, seatNumber,paymentReference,paymentStatus',
+        'please include name, email, location_id, location, movie_id, movie, date_id, date, screening_id, screening,  place, salong, price,totalPrice, seatNumber, paymentReference, paymentStatus, purchaseDate',
     });
   } catch (error) {
     return res.status(500).send({ message: error.message });
   }
 });
 
-// Here I need delete order and seats selected in SeatAvailability Collection
+// Here we need delete order and seats selected in SeatAvailability Collection
 orderRouter.delete('/:sessionId', async (req, res) => {
   try {
     const order = await Order.findOne({
