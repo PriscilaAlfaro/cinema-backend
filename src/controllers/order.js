@@ -8,7 +8,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const orderRouter = express.Router();
 
-const buildEmailContent = (name, movie, location, place, salong, date, screening, seatNumber, totalPrice, paymentStatus) => `<html lang="en">
+const buildEmailContent = (name, movie, location, place, salong, date, screening, seatNumber, totalPrice) => `<html lang="en">
             <head>
              <title>Ticket details</title>
            </head >
