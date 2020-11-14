@@ -6,8 +6,12 @@ const seatAvailabilityRouter = express.Router();
 seatAvailabilityRouter.get('/:screeningId', async (req, res) => {
   const { screeningId } = req.params;
   try {
-    const seatAvailability = await SeatAvailability.findOne({ screening_id: screeningId });
-    return res.json(seatAvailability);
+    if (screeningId) {
+      const seatAvailability = await SeatAvailability.findOne({ screening_id: screeningId });
+      return res.json(seatAvailability);
+    }
+
+    return res.status(400).json({ message: 'please include screeningId in parameter' });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

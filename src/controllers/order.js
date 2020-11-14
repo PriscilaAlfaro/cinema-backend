@@ -93,22 +93,27 @@ orderRouter.patch('/:sessionId', async (req, res) => {
   const { newPaymentStatus } = req.body;
 
   try {
-    const order = await Order.findOne({
-      paymentReference: req.params.sessionId,
-    });
-    if (!order) {
-      res.status(404).json({ message: 'sessionId does not exist' });
-    } else {
+    if (newPaymentStatus) {
+      const order = await Order.findOne({
+        paymentReference: req.params.sessionId,
+      });
+      if (!order) {
+        res.status(404).json({ message: 'sessionId does not exist' });
+      }
       await Order.updateOne(
         { _id: order._id },
         { $set: { paymentStatus: newPaymentStatus } }
       );
 
       order.paymentStatus = newPaymentStatus;
-      res.send({ order });
+      return res.send({ order });
     }
+    return res.status(400).json({
+      message:
+        'please include newPaymentStatus',
+    });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    return res.status(500).json({ message: error.message });
   }
 });
 
@@ -225,13 +230,12 @@ orderRouter.post('/', async (req, res) => {
 
         return res.send({ ...order.toObject(), updatedPurchasedSeats: 'success' });
       }
-
-      // case order dont have seatNumber
-      return res.status(400).json({
-        message:
-        'please include name, email, location_id, location, movie_id, movie, date_id, date, screening_id, screening,  place, salong, price,totalPrice, seatNumber, paymentReference, paymentStatus, purchaseDate',
-      });
     }
+    // case order dont have seatNumber
+    return res.status(400).json({
+      message:
+        'please include name, email, location_id, location, movie_id, movie, date_id, date, screening_id, screening,  place, salong, price,totalPrice, seatNumber, paymentReference, paymentStatus, purchaseDate',
+    });
   } catch (error) {
     return res.status(500).send({ message: error.message });
   }
@@ -240,39 +244,47 @@ orderRouter.post('/', async (req, res) => {
 // Here we need delete order and seats selected in SeatAvailability Collection in case of cancelled
 orderRouter.delete('/:sessionId', async (req, res) => {
   try {
-    const order = await Order.findOne({
-      paymentReference: req.params.sessionId,
+    if (req.params.sessionId) {
+      const order = await Order.findOne({
+        paymentReference: req.params.sessionId,
+      });
+
+      if (!order) {
+        return res.status(404).json({ message: 'order does not exist' });
+      }
+
+      const seatsfromDB = await SeatAvailability.findOne({
+        screening_id: order.screening_id,
+      });
+
+      const userSelectedSeats = order.seatNumber;
+
+      // case seats were not in seatAvailabity
+      if (!seatsfromDB.purchasedSeats.some((seat) => userSelectedSeats.includes(seat))) {
+        return res.status(404).json({ message: 'seats were not found in seatAvailability' });
+      }
+
+      // case seats were in seatAvailabity is necesary update
+      if (
+        seatsfromDB.purchasedSeats.some((seat) => userSelectedSeats.includes(seat))
+      ) {
+        const finalSeats = seatsfromDB.purchasedSeats.filter(
+          (seatFromDB) => !userSelectedSeats.includes(seatFromDB)
+        );
+
+        // both deletions are mede together after validation
+        await Order.deleteOne({ _id: order._id });
+        await SeatAvailability.updateOne(
+          { _id: seatsfromDB._id },
+          { $set: { purchasedSeats: finalSeats } }
+        );
+        return res.status(204).send();
+      }
+    }
+    return res.status(400).json({
+      message:
+        'please include sessionId in parameter',
     });
-    if (!order) {
-      return res.status(404).json({ message: 'order does not exist' });
-    }
-    const seatsfromDB = await SeatAvailability.findOne({
-      screening_id: order.screening_id,
-    });
-
-    const userSelectedSeats = order.seatNumber;
-
-    // case seats were not in seatAvailabity
-    if (!seatsfromDB.purchasedSeats.some((seat) => userSelectedSeats.includes(seat))) {
-      return res.status(404).json({ message: 'seats were not found in seatAvailability' });
-    }
-
-    // case seats were in seatAvailabity is necesary update
-    if (
-      seatsfromDB.purchasedSeats.some((seat) => userSelectedSeats.includes(seat))
-    ) {
-      const finalSeats = seatsfromDB.purchasedSeats.filter(
-        (seatFromDB) => !userSelectedSeats.includes(seatFromDB)
-      );
-
-      // both deletions are mede together after validation
-      await Order.deleteOne({ _id: order._id });
-      await SeatAvailability.updateOne(
-        { _id: seatsfromDB._id },
-        { $set: { purchasedSeats: finalSeats } }
-      );
-      return res.status(204).send();
-    }
   } catch (error) {
     return res.status(500).send({ message: error.message });
   }
