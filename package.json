@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Test: pending\" && exit 0",
+    "test": "NODE_ENV=test mocha --recursive src/test/ --timeout 10000",
     "dev": "NODE_ENV=development nodemon src/server.js",
     "start": "NODE_ENV=production node src/server.js",
     "lint": "eslint \"src/**/*.js\""

@@ -97,7 +97,7 @@ orderRouter.patch('/:sessionId', async (req, res) => {
       paymentReference: req.params.sessionId,
     });
     if (!order) {
-      res.status(404).json({ message: 'order does not exist' });
+      res.status(404).json({ message: 'sessionId does not exist' });
     } else {
       await Order.updateOne(
         { _id: order._id },
@@ -112,6 +112,7 @@ orderRouter.patch('/:sessionId', async (req, res) => {
   }
 });
 
+// Post data in order and update the seatSelected in SeatAvailability
 orderRouter.post('/', async (req, res) => {
   const {
     name,
@@ -131,7 +132,8 @@ orderRouter.post('/', async (req, res) => {
     seatNumber,
     paymentReference,
     paymentStatus,
-    purchaseDate
+    purchaseDate,
+    availability_id
   } = req.body;
 
   try {
@@ -154,20 +156,8 @@ orderRouter.post('/', async (req, res) => {
       && paymentReference
       && paymentStatus
       && purchaseDate
+      && availability_id
     ) {
-      // sengrid-------------------------
-      const msg = {
-        to: email,
-        from: 'priscilahistoria@gmail.com',
-        subject: 'Cinema CR Tickets',
-        text: 'Ticket details',
-        // eslint-disable-next-line max-len
-        html: buildEmailContent(name, movie, location, place, salong, date, screening, seatNumber, totalPrice, purchaseDate),
-      };
-      sgMail.send(msg).then((r) => {
-        console.log('Email sent', r);
-      });
-
       // data base ------------------------
 
       const order = new Order({
@@ -188,34 +178,86 @@ orderRouter.post('/', async (req, res) => {
         seatNumber,
         paymentReference,
         paymentStatus,
-        purchaseDate
+        purchaseDate,
+        availability_id
       });
-      await order.save();
-      return res.json(order);
-    }
-    return res.status(400).json({
-      message:
+      // case order have seatNumber
+      if (seatNumber.length > 0) {
+        const purchasedSeatsfromDB = await SeatAvailability.findOne({
+          _id: availability_id,
+        });
+
+        // case the seats were not available
+        if (
+          purchasedSeatsfromDB.purchasedSeats.some((seat) => seatNumber.includes(seat))
+        ) {
+          return res.status(400).json('The seats has been already purchased');
+        }
+
+        // case seats were available
+        const updatedPurchasedSeats = [
+          ...purchasedSeatsfromDB.purchasedSeats,
+          ...seatNumber,
+        ];
+
+        // order is save until the seats were checked to be update
+        const orderSaved = await order.save();
+        const availabilitySaved = await SeatAvailability.updateOne(
+          { _id: availability_id },
+          { $set: { purchasedSeats: updatedPurchasedSeats } }
+        );
+
+        // sengrid----email is sent until the information was saved
+        if (orderSaved && availabilitySaved) {
+          const msg = {
+            to: email,
+            from: 'priscilahistoria@gmail.com',
+            subject: 'Cinema CR Tickets',
+            text: 'Ticket details',
+
+            html: buildEmailContent(name, movie, location, place, salong, date, screening,
+              seatNumber, totalPrice, purchaseDate),
+          };
+          sgMail.send(msg).then((r) => {
+            console.log('Email sent', r);
+          });
+        }
+
+        return res.send({ ...order.toObject(), updatedPurchasedSeats: 'success' });
+      }
+
+      // case order dont have seatNumber
+      return res.status(400).json({
+        message:
         'please include name, email, location_id, location, movie_id, movie, date_id, date, screening_id, screening,  place, salong, price,totalPrice, seatNumber, paymentReference, paymentStatus, purchaseDate',
-    });
+      });
+    }
   } catch (error) {
     return res.status(500).send({ message: error.message });
   }
 });
 
-// Here we need delete order and seats selected in SeatAvailability Collection
+// Here we need delete order and seats selected in SeatAvailability Collection in case of cancelled
 orderRouter.delete('/:sessionId', async (req, res) => {
   try {
     const order = await Order.findOne({
       paymentReference: req.params.sessionId,
     });
-    const seatsfromDB = await SeatAvailability.findOne({
-      screening_id: order.screening_id,
-    });
-    const userSelectedSeats = order.seatNumber;
     if (!order) {
       return res.status(404).json({ message: 'order does not exist' });
     }
-    await Order.deleteOne({ _id: order._id });
+    const seatsfromDB = await SeatAvailability.findOne({
+      screening_id: order.screening_id,
+    });
+
+    const userSelectedSeats = order.seatNumber;
+
+    // case seats were not in seatAvailabity
+    if (!seatsfromDB.purchasedSeats.some((seat) => userSelectedSeats.includes(seat))) {
+      return res.status(404).json({ message: 'seats were not found in seatAvailability' });
+    }
+
+    // case seats were in seatAvailabity is necesary update
     if (
       seatsfromDB.purchasedSeats.some((seat) => userSelectedSeats.includes(seat))
     ) {
@@ -223,12 +265,14 @@ orderRouter.delete('/:sessionId', async (req, res) => {
         (seatFromDB) => !userSelectedSeats.includes(seatFromDB)
       );
 
+      // both deletions are mede together after validation
+      await Order.deleteOne({ _id: order._id });
       await SeatAvailability.updateOne(
         { _id: seatsfromDB._id },
         { $set: { purchasedSeats: finalSeats } }
       );
+      return res.status(204).send();
     }
-    return res.status(204).send({ _id: order._id });
   } catch (error) {
     return res.status(500).send({ message: error.message });
   }

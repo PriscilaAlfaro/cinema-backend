@@ -13,21 +13,26 @@ locationsRouter.get('/', async (req, res) => {
 });
 
 locationsRouter.post('/', async (req, res) => {
-  const { location, price, totalSeats } = req.body;
+  const {
+    location, price, totalSeats, place, salong, mapUrl
+  } = req.body;
 
   try {
-    if (location && price && totalSeats) {
+    if (location && price && totalSeats && place && salong && mapUrl) {
       const newLocation = new Locations({
         location,
         price,
         totalSeats,
+        place,
+        salong,
+        mapUrl
       });
       await newLocation.save();
       return res.json(newLocation);
     }
     return res
       .status(400)
-      .json({ message: 'please include location, price, totalSeats' });
+      .json({ message: 'please include location, price, totalSeats, place, salong, mapUrl' });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

@@ -3,19 +3,6 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const stripeRouter = express.Router();
 
-stripeRouter.get('/key', (req, res) => {
-  try {
-    if (process.env.STRIPE_API_KEY) {
-      return res.send({ publishableApiKey: process.env.STRIPE_API_KEY });
-    }
-    return res.status(400).json({
-      message: 'there is not STRIPE_API_KEY',
-    });
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
-  }
-});
-
 stripeRouter.post('/create-checkout-session', async (req, res) => {
   const {
     product, price, amount, email
