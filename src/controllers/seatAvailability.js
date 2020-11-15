@@ -13,6 +13,7 @@ seatAvailabilityRouter.get('/:screeningId', async (req, res) => {
       }
       return res.json(seatAvailability);
     }
+    return res.status(400).json({ message: 'please include screeningId in parameter' });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
