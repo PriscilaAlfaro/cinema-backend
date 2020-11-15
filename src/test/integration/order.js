@@ -134,6 +134,36 @@ describe('Order API test', () => {
       expect(body.paymentStatus).to.equal(orderFromDB.paymentStatus);
       expect(body.purchaseDate).to.equal(orderFromDB.purchaseDate.toISOString());
     });
+
+    it('should save return 400 if any data required is not sent in body request', async () => {
+      await supertest(app)
+        .post('/order')
+        .send({
+          location_id: '5f9d5c2269cc111dac056c9e',
+          location: 'Stockholm',
+          movie_id: '5f9d57c26715be1b4bb655d1',
+          movie: 'Nelly Rapp - Monsteragent',
+          date_id: '5f9d5d2a7f933a1dcba88a27',
+          date: '15/11/2020',
+          screening_id: '5f9d5d2a7f933a1dcba88a28',
+          screening: '17:00',
+          salong: 1,
+          place: 'Mall of Scandinavia',
+          price: 10,
+          totalPrice: 20,
+          seatNumber: [
+            5,
+            6
+          ],
+          paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
+          paymentStatus: 'pending',
+          purchaseDate: new Date().toISOString(),
+          availability_id: '123abc',
+        })
+        .expect(400, {
+          message: 'please include name, email, location_id, location, movie_id, movie, date_id, date, screening_id, screening,  place, salong, price,totalPrice, seatNumber, paymentReference, paymentStatus, purchaseDate',
+        });
+    });
   });
 
   describe('PATCH /order/:sessionId', () => {
@@ -203,6 +233,37 @@ describe('Order API test', () => {
         .send({
           newPaymentStatus: 'succes',
         }).expect(404, { message: 'sessionId does not exist' });
+    });
+
+    it('should save return 400 if any data required is not sent in body request', async () => {
+      const order = new Order({
+        name: 'Jhon Doe',
+        email: 'jdoe@gmail.com',
+        location_id: '5f9d5c2269cc111dac056c9e',
+        location: 'Stockholm',
+        movie_id: '5f9d57c26715be1b4bb655d1',
+        movie: 'Nelly Rapp - Monsteragent',
+        date_id: '5f9d5d2a7f933a1dcba88a27',
+        date: '15/11/2020',
+        screening_id: '5f9d5d2a7f933a1dcba88a26',
+        screening: '17:00',
+        salong: 1,
+        place: 'Mall of Scandinavia',
+        price: 10,
+        totalPrice: 20,
+        seatNumber: [
+          5,
+          6
+        ],
+        paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
+        paymentStatus: 'pending',
+        purchaseDate: new Date().toISOString(),
+      });
+      await order.save();
+      await supertest(app)
+        .patch(`/order/${order.paymentReference}`)
+        .send({ })
+        .expect(400, { message: 'please include newPaymentStatus' });
     });
   });
 
@@ -285,7 +346,7 @@ describe('Order API test', () => {
         .expect(404, { message: 'seats were not found in seatAvailability' });
     });
 
-    it('should return sessionId does not exist if no match found for delete', async () => {
+    it('should return `sessionId does not exist` if no match found for delete', async () => {
       const order = new Order({
         name: 'Jhon Doe',
         email: 'jdoe@gmail.com',

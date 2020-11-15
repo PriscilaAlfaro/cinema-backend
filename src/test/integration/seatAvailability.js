@@ -36,5 +36,28 @@ describe('SeatAvailability API test', () => {
       expect(body.screening_id).to.equal('5f9d5d2a7f933a1dcba88a26');
       expect(body.purchasedSeats).to.have.lengthOf(2);
     });
+
+    it('should return `screeningId does not exist` if no match found for get by screening_id', async () => {
+      const seatAvailability = new SeatAvailability({
+        screening_id: '5f9d5d2a7f933a1dcba88a26',
+        purchasedSeats: [
+          10, 11
+        ]
+      });
+      await seatAvailability.save();
+
+      await supertest(app)
+        .get('/seatAvailability/000000000000000000000000')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(404, { message: 'screeningId does not exist' });
+    });
+
+    it('should return server error', async () => {
+      await supertest(app)
+        .get('/seatAvailability/Wrong.seatAvailability.screening_id')
+        .set('Accept', 'application/json')
+        .expect(500);
+    });
   });
 });

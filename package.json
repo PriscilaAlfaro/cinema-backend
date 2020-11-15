@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --recursive src/test/ --timeout 10000",
+    "test": "NODE_ENV=test nyc mocha --recursive src/test/ --timeout 10000",
+    "coverage": "nyc report --reporter=lcov --reporter=text",
     "dev": "NODE_ENV=development nodemon src/server.js",
     "start": "NODE_ENV=production node src/server.js",
     "lint": "eslint \"src/**/*.js\""
@@ -41,6 +42,8 @@
     "mocha": "^8.2.1",
     "chai": "^4.2.0",
     "nodemon": "^2.0.6",
-    "supertest": "^6.0.1"
+    "supertest": "^6.0.1",
+    "nyc": "^15.1.0",
+    "coveralls": "^3.1.0"
   }
 }

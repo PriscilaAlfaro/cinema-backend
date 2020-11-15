@@ -8,10 +8,11 @@ seatAvailabilityRouter.get('/:screeningId', async (req, res) => {
   try {
     if (screeningId) {
       const seatAvailability = await SeatAvailability.findOne({ screening_id: screeningId });
+      if (!seatAvailability) {
+        return res.status(404).json({ message: 'screeningId does not exist' });
+      }
       return res.json(seatAvailability);
     }
-
-    return res.status(400).json({ message: 'please include screeningId in parameter' });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
