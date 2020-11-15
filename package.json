@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "NODE_ENV=test nyc mocha --recursive src/test/ --timeout 10000",
+    "test": "NODE_ENV=test nyc mocha --recursive src/test/ --timeout 10000 --exit",
     "coverage": "nyc report --reporter=lcov --reporter=text",
     "dev": "NODE_ENV=development nodemon src/server.js",
     "start": "NODE_ENV=production node src/server.js",

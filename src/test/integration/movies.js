@@ -1,18 +1,11 @@
 const supertest = require('supertest');
 const { expect } = require('chai');
-const mongoose = require('mongoose');
 const app = require('../../server');
-const { connect } = require('../../config/database');
 const Movies = require('../../models/movies');
 
 describe('Movies API test', () => {
-  beforeEach(async () => {
-    await connect();
-  });
-
   afterEach(async () => {
     await Movies.deleteMany();
-    await mongoose.connection.close();
   });
 
   describe('GET /movies', () => {

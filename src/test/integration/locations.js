@@ -1,18 +1,11 @@
 const supertest = require('supertest');
 const { expect } = require('chai');
-const mongoose = require('mongoose');
 const app = require('../../server');
-const { connect } = require('../../config/database');
 const Locations = require('../../models/locations');
 
 describe('Locations API test', () => {
-  beforeEach(async () => {
-    await connect();
-  });
-
   afterEach(async () => {
     await Locations.deleteMany();
-    await mongoose.connection.close();
   });
 
   describe('GET /locations', () => {
@@ -71,7 +64,7 @@ describe('Locations API test', () => {
       expect(body.mapUrl).to.equal(locationFromDB.mapUrl);
     });
 
-    it('should save return 400 if any data required is not sent in body request', async () => {
+    it('should return 400 if any data required is not sent in body request', async () => {
       await supertest(app)
         .post('/locations')
         .send({

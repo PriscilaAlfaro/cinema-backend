@@ -1,20 +1,13 @@
 const supertest = require('supertest');
 const { expect } = require('chai');
-const mongoose = require('mongoose');
 const app = require('../../server');
-const { connect } = require('../../config/database');
 const Screenings = require('../../models/screenings');
 const SeatAvailability = require('../../models/seatAvailability');
 
 describe('Screenings API test', () => {
-  beforeEach(async () => {
-    await connect();
-  });
-
   afterEach(async () => {
     await Screenings.deleteMany();
     await SeatAvailability.deleteMany();
-    await mongoose.connection.close();
   });
 
   describe('GET /screenings', () => {
@@ -55,7 +48,6 @@ describe('Screenings API test', () => {
     });
   });
 
-  // TODO: testear que se guarde sel seat availabity en []
   describe('POST /screenings', () => {
     it('should save screening to the database', async () => {
       const response = await supertest(app)

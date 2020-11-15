@@ -1,20 +1,13 @@
 const supertest = require('supertest');
 const { expect } = require('chai');
-const mongoose = require('mongoose');
 const app = require('../../server');
-const { connect } = require('../../config/database');
 const Order = require('../../models/order');
 const SeatAvailability = require('../../models/seatAvailability');
 
 describe('Order API test', () => {
-  beforeEach(async () => {
-    await connect();
-  });
-
   afterEach(async () => {
     await Order.deleteMany();
     await SeatAvailability.deleteMany();
-    await mongoose.connection.close();
   });
 
   describe('GET /order/:orderId', () => {
@@ -71,6 +64,39 @@ describe('Order API test', () => {
       expect(body.paymentReference).to.equal('ch_1HiCaI2eZvKYlo2CsnhbyVsJ');
       expect(body.paymentStatus).to.equal('pending');
       expect(body.purchaseDate).to.equal(order.purchaseDate.toISOString());
+    });
+
+    it('should return `order id does not exist` if orderId were not found', async () => {
+      const order = new Order({
+        name: 'Jhon Doe',
+        email: 'jdoe@gmail.com',
+        location_id: '5f9d5c2269cc111dac056c9e',
+        location: 'Stockholm',
+        movie_id: '5f9d57c26715be1b4bb655d1',
+        movie: 'Nelly Rapp - Monsteragent',
+        date_id: '5f9d5d2a7f933a1dcba88a27',
+        date: '15/11/2020',
+        screening_id: '5f9d5d2a7f933a1dcba88a26',
+        screening: '17:00',
+        salong: 1,
+        place: 'Mall of Scandinavia',
+        price: 10,
+        totalPrice: 20,
+        seatNumber: [
+          5,
+          6
+        ],
+        paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
+        paymentStatus: 'pending',
+        purchaseDate: new Date().toISOString(),
+      });
+      await order.save();
+
+      await supertest(app)
+        .get('/order/000000000000000000000000')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(404);
     });
   });
 

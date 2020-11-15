@@ -1,18 +1,11 @@
 const supertest = require('supertest');
 const { expect } = require('chai');
-const mongoose = require('mongoose');
 const app = require('../../server');
-const { connect } = require('../../config/database');
 const SeatAvailability = require('../../models/seatAvailability');
 
 describe('SeatAvailability API test', () => {
-  beforeEach(async () => {
-    await connect();
-  });
-
   afterEach(async () => {
     await SeatAvailability.deleteMany();
-    await mongoose.connection.close();
   });
 
   describe('GET /seatAvailability/:screeningId', () => {
