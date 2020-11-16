@@ -1,0 +1,758 @@
+[
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d2a7f933a1dcba88a28"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d2a7f933a1dcba88a29"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d2a7f933a1dcba88a2b"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d2a7f933a1dcba88a2c"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d2a7f933a1dcba88a2e"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d2a7f933a1dcba88a2f"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e0b7f933a1dcba88a78"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e0b7f933a1dcba88a79"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e0b7f933a1dcba88a7b"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e0b7f933a1dcba88a7c"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e0b7f933a1dcba88a7e"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e0b7f933a1dcba88a7f"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e4c7f933a1dcba88abe"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e4c7f933a1dcba88abf"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e4c7f933a1dcba88ac1"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e4c7f933a1dcba88ac2"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e4c7f933a1dcba88ac4"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e4c7f933a1dcba88ac5"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d467f933a1dcba88a32"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d467f933a1dcba88a33"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d467f933a1dcba88a35"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d467f933a1dcba88a36"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d467f933a1dcba88a38"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d467f933a1dcba88a39"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e137f933a1dcba88a82"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e137f933a1dcba88a83"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e137f933a1dcba88a85"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e137f933a1dcba88a86"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e137f933a1dcba88a88"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e137f933a1dcba88a89"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e547f933a1dcba88ac8"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e547f933a1dcba88ac9"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e547f933a1dcba88acb"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e547f933a1dcba88acc"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e547f933a1dcba88ace"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e547f933a1dcba88acf"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d507f933a1dcba88a3c"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d507f933a1dcba88a3d"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d507f933a1dcba88a3f"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d507f933a1dcba88a40"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d507f933a1dcba88a42"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d507f933a1dcba88a43"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e1a7f933a1dcba88a8c"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e1a7f933a1dcba88a8d"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e1a7f933a1dcba88a8f"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e1a7f933a1dcba88a90"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e1a7f933a1dcba88a92"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e1a7f933a1dcba88a93"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e5c7f933a1dcba88ad2"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e5c7f933a1dcba88ad3"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e5c7f933a1dcba88ad5"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e5c7f933a1dcba88ad6"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e5c7f933a1dcba88ad8"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e5c7f933a1dcba88ad9"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d7c7f933a1dcba88a46"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d7c7f933a1dcba88a47"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d7c7f933a1dcba88a49"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d7c7f933a1dcba88a4a"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d7c7f933a1dcba88a4c"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d7c7f933a1dcba88a4d"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e227f933a1dcba88a96"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e227f933a1dcba88a97"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e227f933a1dcba88a99"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e227f933a1dcba88a9a"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e227f933a1dcba88a9c"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e227f933a1dcba88a9d"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e627f933a1dcba88adc"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e627f933a1dcba88add"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e627f933a1dcba88adf"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e627f933a1dcba88ae0"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e627f933a1dcba88ae2"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e627f933a1dcba88ae3"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d9a7f933a1dcba88a50"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d9a7f933a1dcba88a51"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d9a7f933a1dcba88a53"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d9a7f933a1dcba88a54"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d9a7f933a1dcba88a56"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5d9a7f933a1dcba88a57"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e2a7f933a1dcba88aa0"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e2a7f933a1dcba88aa1"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e2a7f933a1dcba88aa3"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e2a7f933a1dcba88aa4"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e2a7f933a1dcba88aa6"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e2a7f933a1dcba88aa7"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e6d7f933a1dcba88ae6"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e6d7f933a1dcba88ae7"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e6d7f933a1dcba88ae9"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e6d7f933a1dcba88aea"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e6d7f933a1dcba88aec"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e6d7f933a1dcba88aed"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5da27f933a1dcba88a5a"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5da27f933a1dcba88a5b"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5da27f933a1dcba88a5d"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5da27f933a1dcba88a5e"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5da27f933a1dcba88a60"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5da27f933a1dcba88a61"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e327f933a1dcba88aaa"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e327f933a1dcba88aab"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e327f933a1dcba88aad"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e327f933a1dcba88aae"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e327f933a1dcba88ab0"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e327f933a1dcba88ab1"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e727f933a1dcba88af0"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e727f933a1dcba88af1"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e727f933a1dcba88af3"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e727f933a1dcba88af4"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e727f933a1dcba88af6"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e727f933a1dcba88af7"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5db27f933a1dcba88a6e"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5db27f933a1dcba88a6f"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5db27f933a1dcba88a71"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5db27f933a1dcba88a72"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5db27f933a1dcba88a74"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5db27f933a1dcba88a75"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e3a7f933a1dcba88ab4"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e3a7f933a1dcba88ab5"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e3a7f933a1dcba88ab7"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e3a7f933a1dcba88ab8"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e3a7f933a1dcba88aba"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e3a7f933a1dcba88abb"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e787f933a1dcba88afa"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e787f933a1dcba88afb"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e787f933a1dcba88afd"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e787f933a1dcba88afe"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e787f933a1dcba88b00"
+        }
+    },
+    {
+        "purchasedSeats": [],
+        "screening_id": {
+            "$oid": "5f9d5e787f933a1dcba88b01"
+        }
+    }
+]

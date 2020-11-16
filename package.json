@@ -8,7 +8,8 @@
     "coverage": "nyc report --reporter=lcov --reporter=text",
     "dev": "NODE_ENV=development nodemon src/server.js",
     "start": "NODE_ENV=production node src/server.js",
-    "lint": "eslint \"src/**/*.js\""
+    "lint": "eslint \"src/**/*.js\"",
+    "seedDb": "node seed-db/import.js"
   },
   "husky": {
     "hooks": {
@@ -29,7 +30,8 @@
     "express": "^4.17.1",
     "husky": "^4.3.0",
     "mongoose": "^5.10.10",
-    "stripe": "^8.119.0"
+    "stripe": "^8.119.0",
+    "mongo-seeding": "^3.4.1"
   },
   "devDependencies": {
     "eslint": "^7.10.0",
@@ -44,6 +46,7 @@
     "nodemon": "^2.0.6",
     "supertest": "^6.0.1",
     "nyc": "^15.1.0",
-    "coveralls": "^3.1.0"
+    "coveralls": "^3.1.0",
+    "mongo-seeding": "^3.4.1"
   }
 }

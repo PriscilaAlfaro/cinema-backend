@@ -1,0 +1,1535 @@
+[
+    {
+        "_id": {
+            "$oid": "5f9d5d2a7f933a1dcba88a26"
+        },
+        "movie_id": {
+            "$oid": "5f9d57c26715be1b4bb655d1"
+        },
+        "location_id": {
+            "$oid": "5f9d5c2269cc111dac056c9e"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5d2a7f933a1dcba88a27"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d2a7f933a1dcba88a28"
+                        },
+                        "hour": "17:05"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d2a7f933a1dcba88a29"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d2a7f933a1dcba88a2a"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d2a7f933a1dcba88a2b"
+                        },
+                        "hour": "14:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d2a7f933a1dcba88a2c"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d2a7f933a1dcba88a2d"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d2a7f933a1dcba88a2e"
+                        },
+                        "hour": "16:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d2a7f933a1dcba88a2f"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e0b7f933a1dcba88a76"
+        },
+        "movie_id": {
+            "$oid": "5f9d57c26715be1b4bb655d1"
+        },
+        "location_id": {
+            "$oid": "5f9d5c4269cc111dac056c9f"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e0b7f933a1dcba88a77"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e0b7f933a1dcba88a78"
+                        },
+                        "hour": "12:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e0b7f933a1dcba88a79"
+                        },
+                        "hour": "12:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e0b7f933a1dcba88a7a"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e0b7f933a1dcba88a7b"
+                        },
+                        "hour": "13:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e0b7f933a1dcba88a7c"
+                        },
+                        "hour": "13:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e0b7f933a1dcba88a7d"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e0b7f933a1dcba88a7e"
+                        },
+                        "hour": "14:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e0b7f933a1dcba88a7f"
+                        },
+                        "hour": "14:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e4c7f933a1dcba88abc"
+        },
+        "movie_id": {
+            "$oid": "5f9d57c26715be1b4bb655d1"
+        },
+        "location_id": {
+            "$oid": "5f9d5c5469cc111dac056ca0"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e4c7f933a1dcba88abd"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e4c7f933a1dcba88abe"
+                        },
+                        "hour": "7:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e4c7f933a1dcba88abf"
+                        },
+                        "hour": "7:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e4c7f933a1dcba88ac0"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e4c7f933a1dcba88ac1"
+                        },
+                        "hour": "9:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e4c7f933a1dcba88ac2"
+                        },
+                        "hour": "9:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e4c7f933a1dcba88ac3"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e4c7f933a1dcba88ac4"
+                        },
+                        "hour": "10:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e4c7f933a1dcba88ac5"
+                        },
+                        "hour": "10:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5d467f933a1dcba88a30"
+        },
+        "movie_id": {
+            "$oid": "5f9d58504a8b6f1c27d6aa6c"
+        },
+        "location_id": {
+            "$oid": "5f9d5c2269cc111dac056c9e"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5d467f933a1dcba88a31"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d467f933a1dcba88a32"
+                        },
+                        "hour": "13:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d467f933a1dcba88a33"
+                        },
+                        "hour": "14:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d467f933a1dcba88a34"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d467f933a1dcba88a35"
+                        },
+                        "hour": "14:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d467f933a1dcba88a36"
+                        },
+                        "hour": "15:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d467f933a1dcba88a37"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d467f933a1dcba88a38"
+                        },
+                        "hour": "18:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d467f933a1dcba88a39"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e137f933a1dcba88a80"
+        },
+        "movie_id": {
+            "$oid": "5f9d58504a8b6f1c27d6aa6c"
+        },
+        "location_id": {
+            "$oid": "5f9d5c4269cc111dac056c9f"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e137f933a1dcba88a81"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e137f933a1dcba88a82"
+                        },
+                        "hour": "12:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e137f933a1dcba88a83"
+                        },
+                        "hour": "12:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e137f933a1dcba88a84"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e137f933a1dcba88a85"
+                        },
+                        "hour": "14:20"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e137f933a1dcba88a86"
+                        },
+                        "hour": "16:40"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e137f933a1dcba88a87"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e137f933a1dcba88a88"
+                        },
+                        "hour": "15:45"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e137f933a1dcba88a89"
+                        },
+                        "hour": "17:20"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e547f933a1dcba88ac6"
+        },
+        "movie_id": {
+            "$oid": "5f9d58504a8b6f1c27d6aa6c"
+        },
+        "location_id": {
+            "$oid": "5f9d5c5469cc111dac056ca0"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e547f933a1dcba88ac7"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e547f933a1dcba88ac8"
+                        },
+                        "hour": "13:45"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e547f933a1dcba88ac9"
+                        },
+                        "hour": "14:15"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e547f933a1dcba88aca"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e547f933a1dcba88acb"
+                        },
+                        "hour": "14:50"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e547f933a1dcba88acc"
+                        },
+                        "hour": "16:40"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e547f933a1dcba88acd"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e547f933a1dcba88ace"
+                        },
+                        "hour": "16:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e547f933a1dcba88acf"
+                        },
+                        "hour": "17:35"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5d507f933a1dcba88a3a"
+        },
+        "movie_id": {
+            "$oid": "5f9d58644a8b6f1c27d6aa6d"
+        },
+        "location_id": {
+            "$oid": "5f9d5c2269cc111dac056c9e"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5d507f933a1dcba88a3b"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d507f933a1dcba88a3c"
+                        },
+                        "hour": "17:10"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d507f933a1dcba88a3d"
+                        },
+                        "hour": "20:35"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d507f933a1dcba88a3e"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d507f933a1dcba88a3f"
+                        },
+                        "hour": "14:05"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d507f933a1dcba88a40"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d507f933a1dcba88a41"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d507f933a1dcba88a42"
+                        },
+                        "hour": "16:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d507f933a1dcba88a43"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e1a7f933a1dcba88a8a"
+        },
+        "movie_id": {
+            "$oid": "5f9d58644a8b6f1c27d6aa6d"
+        },
+        "location_id": {
+            "$oid": "5f9d5c4269cc111dac056c9f"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e1a7f933a1dcba88a8b"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e1a7f933a1dcba88a8c"
+                        },
+                        "hour": "17:25"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e1a7f933a1dcba88a8d"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e1a7f933a1dcba88a8e"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e1a7f933a1dcba88a8f"
+                        },
+                        "hour": "14:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e1a7f933a1dcba88a90"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e1a7f933a1dcba88a91"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e1a7f933a1dcba88a92"
+                        },
+                        "hour": "16:10"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e1a7f933a1dcba88a93"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e5c7f933a1dcba88ad0"
+        },
+        "movie_id": {
+            "$oid": "5f9d58644a8b6f1c27d6aa6d"
+        },
+        "location_id": {
+            "$oid": "5f9d5c5469cc111dac056ca0"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e5c7f933a1dcba88ad1"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e5c7f933a1dcba88ad2"
+                        },
+                        "hour": "17:25"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e5c7f933a1dcba88ad3"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e5c7f933a1dcba88ad4"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e5c7f933a1dcba88ad5"
+                        },
+                        "hour": "19:10"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e5c7f933a1dcba88ad6"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e5c7f933a1dcba88ad7"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e5c7f933a1dcba88ad8"
+                        },
+                        "hour": "18:45"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e5c7f933a1dcba88ad9"
+                        },
+                        "hour": "20:15"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5d7c7f933a1dcba88a44"
+        },
+        "movie_id": {
+            "$oid": "5f9d58804a8b6f1c27d6aa6e"
+        },
+        "location_id": {
+            "$oid": "5f9d5c2269cc111dac056c9e"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5d7c7f933a1dcba88a45"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d7c7f933a1dcba88a46"
+                        },
+                        "hour": "17:50"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d7c7f933a1dcba88a47"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d7c7f933a1dcba88a48"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d7c7f933a1dcba88a49"
+                        },
+                        "hour": "17:15"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d7c7f933a1dcba88a4a"
+                        },
+                        "hour": "18:35"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d7c7f933a1dcba88a4b"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d7c7f933a1dcba88a4c"
+                        },
+                        "hour": "16:40"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d7c7f933a1dcba88a4d"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e227f933a1dcba88a94"
+        },
+        "movie_id": {
+            "$oid": "5f9d58804a8b6f1c27d6aa6e"
+        },
+        "location_id": {
+            "$oid": "5f9d5c4269cc111dac056c9f"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e227f933a1dcba88a95"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e227f933a1dcba88a96"
+                        },
+                        "hour": "18:05"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e227f933a1dcba88a97"
+                        },
+                        "hour": "20:35"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e227f933a1dcba88a98"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e227f933a1dcba88a99"
+                        },
+                        "hour": "17:05"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e227f933a1dcba88a9a"
+                        },
+                        "hour": "19:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e227f933a1dcba88a9b"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e227f933a1dcba88a9c"
+                        },
+                        "hour": "18:20"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e227f933a1dcba88a9d"
+                        },
+                        "hour": "20:45"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e627f933a1dcba88ada"
+        },
+        "movie_id": {
+            "$oid": "5f9d58804a8b6f1c27d6aa6e"
+        },
+        "location_id": {
+            "$oid": "5f9d5c5469cc111dac056ca0"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e627f933a1dcba88adb"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e627f933a1dcba88adc"
+                        },
+                        "hour": "18:05"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e627f933a1dcba88add"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e627f933a1dcba88ade"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e627f933a1dcba88adf"
+                        },
+                        "hour": "18:15"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e627f933a1dcba88ae0"
+                        },
+                        "hour": "19:50"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e627f933a1dcba88ae1"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e627f933a1dcba88ae2"
+                        },
+                        "hour": "19:40"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e627f933a1dcba88ae3"
+                        },
+                        "hour": "20:15"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5d9a7f933a1dcba88a4e"
+        },
+        "movie_id": {
+            "$oid": "5f9d58a44a8b6f1c27d6aa6f"
+        },
+        "location_id": {
+            "$oid": "5f9d5c2269cc111dac056c9e"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5d9a7f933a1dcba88a4f"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d9a7f933a1dcba88a50"
+                        },
+                        "hour": "20:05"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d9a7f933a1dcba88a51"
+                        },
+                        "hour": "21:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d9a7f933a1dcba88a52"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d9a7f933a1dcba88a53"
+                        },
+                        "hour": "20:40"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d9a7f933a1dcba88a54"
+                        },
+                        "hour": "21:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5d9a7f933a1dcba88a55"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d9a7f933a1dcba88a56"
+                        },
+                        "hour": "19:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5d9a7f933a1dcba88a57"
+                        },
+                        "hour": "20:50"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e2a7f933a1dcba88a9e"
+        },
+        "movie_id": {
+            "$oid": "5f9d58a44a8b6f1c27d6aa6f"
+        },
+        "location_id": {
+            "$oid": "5f9d5c4269cc111dac056c9f"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e2a7f933a1dcba88a9f"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e2a7f933a1dcba88aa0"
+                        },
+                        "hour": "20:40"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e2a7f933a1dcba88aa1"
+                        },
+                        "hour": "21:50"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e2a7f933a1dcba88aa2"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e2a7f933a1dcba88aa3"
+                        },
+                        "hour": "20:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e2a7f933a1dcba88aa4"
+                        },
+                        "hour": "21:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e2a7f933a1dcba88aa5"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e2a7f933a1dcba88aa6"
+                        },
+                        "hour": "19:50"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e2a7f933a1dcba88aa7"
+                        },
+                        "hour": "20:55"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e6d7f933a1dcba88ae4"
+        },
+        "movie_id": {
+            "$oid": "5f9d58a44a8b6f1c27d6aa6f"
+        },
+        "location_id": {
+            "$oid": "5f9d5c5469cc111dac056ca0"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e6d7f933a1dcba88ae5"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e6d7f933a1dcba88ae6"
+                        },
+                        "hour": "19:50"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e6d7f933a1dcba88ae7"
+                        },
+                        "hour": "20:45"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e6d7f933a1dcba88ae8"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e6d7f933a1dcba88ae9"
+                        },
+                        "hour": "21:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e6d7f933a1dcba88aea"
+                        },
+                        "hour": "21:50"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e6d7f933a1dcba88aeb"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e6d7f933a1dcba88aec"
+                        },
+                        "hour": "20:55"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e6d7f933a1dcba88aed"
+                        },
+                        "hour": "21:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5da27f933a1dcba88a58"
+        },
+        "movie_id": {
+            "$oid": "5f9d58ae4a8b6f1c27d6aa70"
+        },
+        "location_id": {
+            "$oid": "5f9d5c2269cc111dac056c9e"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5da27f933a1dcba88a59"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5da27f933a1dcba88a5a"
+                        },
+                        "hour": "18:20"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5da27f933a1dcba88a5b"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5da27f933a1dcba88a5c"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5da27f933a1dcba88a5d"
+                        },
+                        "hour": "14:10"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5da27f933a1dcba88a5e"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5da27f933a1dcba88a5f"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5da27f933a1dcba88a60"
+                        },
+                        "hour": "16:10"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5da27f933a1dcba88a61"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e327f933a1dcba88aa8"
+        },
+        "movie_id": {
+            "$oid": "5f9d58ae4a8b6f1c27d6aa70"
+        },
+        "location_id": {
+            "$oid": "5f9d5c4269cc111dac056c9f"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e327f933a1dcba88aa9"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e327f933a1dcba88aaa"
+                        },
+                        "hour": "16:50"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e327f933a1dcba88aab"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e327f933a1dcba88aac"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e327f933a1dcba88aad"
+                        },
+                        "hour": "14:15"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e327f933a1dcba88aae"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e327f933a1dcba88aaf"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e327f933a1dcba88ab0"
+                        },
+                        "hour": "16:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e327f933a1dcba88ab1"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e727f933a1dcba88aee"
+        },
+        "movie_id": {
+            "$oid": "5f9d58ae4a8b6f1c27d6aa70"
+        },
+        "location_id": {
+            "$oid": "5f9d5c5469cc111dac056ca0"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e727f933a1dcba88aef"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e727f933a1dcba88af0"
+                        },
+                        "hour": "19:05"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e727f933a1dcba88af1"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e727f933a1dcba88af2"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e727f933a1dcba88af3"
+                        },
+                        "hour": "14:40"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e727f933a1dcba88af4"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e727f933a1dcba88af5"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e727f933a1dcba88af6"
+                        },
+                        "hour": "16:50"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e727f933a1dcba88af7"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5db27f933a1dcba88a6c"
+        },
+        "movie_id": {
+            "$oid": "5f9d58b94a8b6f1c27d6aa71"
+        },
+        "location_id": {
+            "$oid": "5f9d5c2269cc111dac056c9e"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5db27f933a1dcba88a6d"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5db27f933a1dcba88a6e"
+                        },
+                        "hour": "18:55"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5db27f933a1dcba88a6f"
+                        },
+                        "hour": "20:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5db27f933a1dcba88a70"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5db27f933a1dcba88a71"
+                        },
+                        "hour": "14:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5db27f933a1dcba88a72"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5db27f933a1dcba88a73"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5db27f933a1dcba88a74"
+                        },
+                        "hour": "16:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5db27f933a1dcba88a75"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e3a7f933a1dcba88ab2"
+        },
+        "movie_id": {
+            "$oid": "5f9d58b94a8b6f1c27d6aa71"
+        },
+        "location_id": {
+            "$oid": "5f9d5c4269cc111dac056c9f"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e3a7f933a1dcba88ab3"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e3a7f933a1dcba88ab4"
+                        },
+                        "hour": "16:55"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e3a7f933a1dcba88ab5"
+                        },
+                        "hour": "20:35"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e3a7f933a1dcba88ab6"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e3a7f933a1dcba88ab7"
+                        },
+                        "hour": "14:25"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e3a7f933a1dcba88ab8"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e3a7f933a1dcba88ab9"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e3a7f933a1dcba88aba"
+                        },
+                        "hour": "16:55"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e3a7f933a1dcba88abb"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "5f9d5e787f933a1dcba88af8"
+        },
+        "movie_id": {
+            "$oid": "5f9d58b94a8b6f1c27d6aa71"
+        },
+        "location_id": {
+            "$oid": "5f9d5c5469cc111dac056ca0"
+        },
+        "dates": [
+            {
+                "_id": {
+                    "$oid": "5f9d5e787f933a1dcba88af9"
+                },
+                "date": "2020-12-04",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e787f933a1dcba88afa"
+                        },
+                        "hour": "18:40"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e787f933a1dcba88afb"
+                        },
+                        "hour": "20:50"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e787f933a1dcba88afc"
+                },
+                "date": "2020-12-05",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e787f933a1dcba88afd"
+                        },
+                        "hour": "14:20"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e787f933a1dcba88afe"
+                        },
+                        "hour": "16:30"
+                    }
+                ]
+            },
+            {
+                "_id": {
+                    "$oid": "5f9d5e787f933a1dcba88aff"
+                },
+                "date": "2020-12-06",
+                "screening": [
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e787f933a1dcba88b00"
+                        },
+                        "hour": "16:00"
+                    },
+                    {
+                        "_id": {
+                            "$oid": "5f9d5e787f933a1dcba88b01"
+                        },
+                        "hour": "18:30"
+                    }
+                ]
+            }
+        ]
+    }
+]
