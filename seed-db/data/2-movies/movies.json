@@ -12,9 +12,9 @@
         },
         "duration": "1:32 min",
         "minimunAge": 11,
-        "poster": "https://image.tmdb.org/t/p/original/4LuJCO1edIbLVGx99uv7luDoIJt.jpg",
+        "poster": "https://storage.googleapis.com/cinema-cr/img-PosterNellyRapp.jpg",
         "video": "https://www.youtube.com/embed/Z7LQTZnaSzk",
-        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/4fcc013a61e04db3888f03f187b0c6b7.jpg?width=240&version=1C7CCC78AD4FC41C08AB456DF0A59168&format=webp",
+        "image": "https://storage.googleapis.com/cinema-cr/img-Nelly-Rapp.jpg",
         "description": {
             "sv": "Nelly och hennes hund London ska tillbringa höstlovet hos sin morbror Hannibal. Men det visar sig att Hannibal inte lever det lugna liv som hon trott – han är en monsteragent! Nelly är snart omgiven av vampyrer, spöken, varulvar och Frankensteinare och dras in i ett gastkramande äventyr där allt hon tidigare trott på sätts på prov.",
             "es": "Nelly y su perro London pasarán las vacaciones de otoño con su tío Hannibal. Pero resulta que Hannibal no vive la vida tranquila que ella pensaba: ¡es un agente monstruo! Nelly pronto se ve rodeada de vampiros, fantasmas, hombres lobo y Frankensteiners y se ve arrastrada a una aventura sin aliento donde todo en lo que creía anteriormente se pone a prueba."
@@ -33,9 +33,9 @@
         },
         "duration": "1:31 min",
         "minimunAge": 7,
-        "poster": "https://miro.medium.com/max/5760/1*A0tzaUmQLj_bHW_sy-vnRQ.jpeg",
+        "poster": "https://storage.googleapis.com/cinema-cr/img-PosterTrolls2.jpeg",
         "video": "https://www.youtube.com/embed/P9A6hOg9QQ0",
-        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/68bfeef55ada4e7ab0606db2af0f40ad.jpg?width=240&version=EA2E80EE161E5DA161C6E26487054C9F&format=webp",
+        "image": "https://storage.googleapis.com/cinema-cr/img-Trolls-2.jpg",
         "description": {
             "sv": "Poppy och Kvist ger sig ut på ett äventyr som kommer att föra dem långt bortom den verklighet de förut känt till. Under resans gång kommer de att upptäcka att de tillhör bara ett av de sex olika sorters trollfolk som bor utspridda över sex olika länder och som är hängivna sex olika sorters musik: Funk, Country, Techno, Klassiskt, Pop och Rock. Deras värld kommer att bli väldigt mycket större, och väldigt mycket högljuddare, än förut. En medlem av hårdrockens kungafamilj, drottning Barb, vill, med hjälp av sin far kung Thrash, förgöra alla andra sorters musik så att hårdrocken ensam kan regera. Världens öde står på spel och Poppy, Kvist, Biggie, Chenille, Satin, Cooper och Guy Diamond ger sig iväg så att de tillsammans kan hindra Barb från att ta över hela scenen.",
             "es": "Poppy y Kvist se embarcan en una aventura que los llevará mucho más allá de la realidad que conocían anteriormente. Durante el viaje, descubrirán que pertenecen solo a uno de los seis tipos diferentes de magos que viven dispersos en seis países diferentes y que se dedican a seis tipos diferentes de música: Funk, Country, Techno, Classical, Pop y Rock. Su mundo será mucho más grande y más ruidoso que antes. Un miembro de la familia real del hard rock, la reina Barb, quiere, con la ayuda de su padre, el rey Thrash, destruir todos los demás tipos de música para que solo el hard rock pueda gobernar. El destino del mundo está en juego y Poppy, Kvist, Biggie, Chenille, Satin, Cooper y Guy Diamond se van para que juntos puedan evitar que Barb se apodere de todo el escenario."
@@ -54,9 +54,9 @@
         },
         "duration": "2:30 min",
         "minimunAge": 15,
-        "poster": "https://miro.medium.com/max/7680/1*rPh_zbqkfcPeq65rEUfM0w.jpeg",
+        "poster": "https://storage.googleapis.com/cinema-cr/img-PosterTenet.jpeg",
         "video": "https://www.youtube.com/embed/L3pk_TBkihU",
-        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/30f92cc5903648b79d4cecc3e96e5e97.jpg?width=240&version=F441983B8A4DF762178264DDB8A24AE0&format=webp",
+        "image": "https://storage.googleapis.com/cinema-cr/img-Tenet.jpg",
         "description": {
             "sv": "Christopher Nolans 'Tenet' är en episk actionfilm som tar sitt avstamp i den internationella spionvärlden. John David Washington spelar huvudrollen som protagonisten i Christopher Nolans nya actionfilm 'Tenet'. I en skuggvärld av spionage på hög internationell nivå är ordet Tenet det enda redskap han har för att rädda mänskligheten. Hans mål utvecklas under det att uppdraget utförs. Bortom tiden. Inte tidsresor. Nolan har skrivit och regisserat filmen och har använt sig av en mix av IMAX och 70mm för att ge historien liv på bioduken. 'Tenet' har spelats in på plats i sju länder världen över, bland annat i Italien, Indien, Norge, Estland, Danmark, England och USA.",
             "es": "'Tenet' de Christopher Nolan es una película de acción épica que tiene su punto de partida en el mundo internacional de los espías. John David Washington interpreta al protagonista de la nueva película de acción de Christopher Nolan 'Tenet'. En un sombrío mundo de espionaje de alto nivel internacional, la palabra Tenet es la única herramienta que tiene para salvar a la humanidad. Sus metas se desarrollan mientras se realiza la misión. Más allá del tiempo. No viajar en el tiempo. Nolan ha escrito y dirigido la película y ha utilizado una combinación de IMAX y 70 mm para dar vida a la historia en la pantalla grande. 'Tenet' se ha grabado en exteriores en siete países de todo el mundo, incluidos Italia, India, Noruega, Estonia, Dinamarca, Inglaterra y Estados Unidos."
@@ -75,9 +75,9 @@
         },
         "duration": "1:39 min",
         "minimunAge": 15,
-        "poster": "https://catalog.cinema-api.com/cf/images/ncg-images/d410d62ff4ef452db5b54352b8d43a4e.jpg?width=1920&version=6A11ABAD3CA0D8CE9B8BFC057BD1E2F0",
+        "poster": "https://storage.googleapis.com/cinema-cr/img-PosterHonestThief.jpg",
         "video": "https://www.youtube.com/embed/_TLtcw7ixRc",
-        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/1babd367d22c42468c987f48f8a56187.jpg?width=240&version=4B6EF668142FCF8AA8546A0CA82D6A3C&format=webp",
+        "image": "https://storage.googleapis.com/cinema-cr/img-HonestThief.jpg",
         "description": {
             "sv": "Liam Neeson är bankrånaren Tom Carter, som länge gäckat polisen med sina smarta kassaskåpskupper. När han plötsligt träffar kvinnan i sitt liv tar han beslutet att lämna över sig själv och alla stulna miljoner till polisen. Målet är att få en deal om kortare strafftid för sedan kunna börja ett nytt liv på allvar. Men Tom inser snart att polisen är mer korrupt än han själv, och för att rentvå sitt namn måste han slå tillbaka.",
             "es": "Liam Neeson es el ladrón de bancos Tom Carter, que durante mucho tiempo ha eludido a la policía con sus elegantes cajones de seguridad. Cuando de repente conoce a la mujer de su vida, toma la decisión de entregarse a sí mismo y a todos los millones robados a la policía. El objetivo es llegar a un acuerdo por una sentencia más corta y luego poder comenzar una nueva vida en serio. Pero Tom pronto se da cuenta de que la policía es más corrupta que él, y para limpiar su nombre tiene que contraatacar."
@@ -96,9 +96,9 @@
         },
         "duration": "1:27 min",
         "minimunAge": 15,
-        "poster": "https://cached-images.bonnier.news/swift/bilder/mly/e8af592e-f024-498a-b6b9-4de568f1a8d4.jpeg",
+        "poster": "https://storage.googleapis.com/cinema-cr/img-PosterAndraSidan.jpeg",
         "video": "https://www.youtube.com/embed/EN4ICCu8SJI",
-        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/bf98a74743b843d18a6ea886c718410a.jpg?width=240&version=680CCA61786CAD6E21CB87E5EA110E6F&format=webp",
+        "image": "https://storage.googleapis.com/cinema-cr/img-AndraSidan.jpg",
         "description": {
             "sv": "Shirin har just flyttat till ett parhus utanför stan med sin sambo Fredrik och hans son, Lucas. När Fredrik är bortrest på jobb börjar märkliga ljud komma från husets andra, obebodda, del. Och Lucas har från ingenstans fått en ny bästa vän...",
             "es": "Shirin se acaba de mudar a una casa adosada en las afueras de la ciudad con su compañero Fredrik y su hijo, Lucas. Cuando Fredrik está fuera del trabajo, comienzan a llegar sonidos extraños desde la otra parte deshabitada de la casa. Y Lucas no tiene en ninguna parte un nuevo mejor amigo ..."
@@ -117,9 +117,9 @@
         },
         "duration": "2:15 min",
         "minimunAge": 15,
-        "poster": "https://img.over-blog-kiwi.com/5/58/52/71/20200806/ob_c0fa12_t4t4d3rkuumzsdk8f83crlbijzc.jpg",
+        "poster": "https://storage.googleapis.com/cinema-cr/img-PosterGreenland.jpg",
         "video": "https://www.youtube.com/embed/vz-gdEL_ae8",
-        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/a31436420a544e09bf6aae299cf1544c.jpg?width=240&version=0EE8C92BD1060CD3E64FFF40E1C66E3B&format=webp",
+        "image": "https://storage.googleapis.com/cinema-cr/img-Greenland.jpg",
         "description": {
             "sv": "Familjen Garrity kämpar för att överleva samtidigt som en dödlig komet är på väg mot jorden. John, hans fru Allison och deras lilla son Nathan gör en riskfylld resa för att ta sig till en säker plats. När världen nås av skrämmande nyheter om kometens dödliga framfart upplever familjen Garrity både det bästa och värsta hos mänskligheten samtidigt som de kämpar mot den ökade paniken och laglösheten runt omkring dem. Nedräkningen till den globala apokalypsen närmar sig och familjens desperata flykt kulminerar i ett sista-minuten-flyg till en möjlig fristad.",
             "es": "La familia Garrity lucha por sobrevivir mientras un cometa mortal se dirige a la Tierra. John, su esposa Allison y su pequeño hijo Nathan hacen un viaje arriesgado para llegar a un lugar seguro. Cuando llegan al mundo noticias aterradoras sobre el avance mortal del cometa, la familia Garrity experimenta lo mejor y lo peor de la humanidad mientras lucha contra el pánico y la anarquía que los rodea. Se acerca la cuenta regresiva para el apocalipsis global y la desesperada huida de la familia culmina en un vuelo de último minuto a un posible santuario."
@@ -138,9 +138,9 @@
         },
         "duration": "1:45 min",
         "minimunAge": 11,
-        "poster": "https://decider.com/wp-content/uploads/2020/07/After-Movie-.jpg?quality=80&strip=all",
+        "poster": "https://storage.googleapis.com/cinema-cr/img-PosterAfterWeCollided.jpg",
         "video": "https://www.youtube.com/embed/ndyVh4GFMw0",
-        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/af43a0ff2f91418aa4eec5428d16fc3e.jpg?width=240&version=91366B855670F94E48E7BFFB7EA1CE27&format=webp",
+        "image": "https://storage.googleapis.com/cinema-cr/img-AfterWeCollided.jpg",
         "description": {
             "sv": "Hardin Scott and Tessa Young go through the aftermath of their breakup. While Hardin falls into bad habits, Tessa is filled with new self-confidence and lands her dream internship at the publisher Vance. At her new workplace, she pays attention to her handsome new co-worker Trevor, who is exactly the kind of guy she should be with. He is smart, funny, handsome and responsible, but Tessa can not get Hardin out of her head. He's still the love of her life. Despite all their misunderstandings and difficulties, Tessa can not deny the attraction she has to Hardin. She wishes she could stay away ... it's just not that easy. Through all the ups and downs, Hardin and Tessa will fight to be together ... even if the universe wants them to be apart.",
             "es": "Hardin Scott y Tessa Young atraviesan las secuelas de su ruptura. Mientras Hardin cae en malos hábitos, Tessa se llena de nueva confianza y consigue la pasantía de sus sueños en la editorial Vance. En su nuevo lugar de trabajo, presta atención a su nuevo y atractivo compañero de trabajo Trevor, que es exactamente el tipo de hombre con el que debería estar. Es inteligente, divertido, guapo y responsable, pero Tessa no puede sacar a Hardin de su cabeza. Después de todo, él es el amor de su vida. A pesar de todos sus malentendidos y dificultades, Tessa no puede negar la atracción que siente por Hardin. Desearía poder mantenerse alejada ... simplemente no es tan fácil. A través de todos los altibajos, Hardin y Tessa lucharán por estar juntos ... incluso si el universo quiere que estén separados."

@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
-// see https://www.npmjs.com/package/mongo-seeding
-// see https://github.com/pkosiec/mongo-seeding/blob/master/docs/import-data-definition.md
+
 process.env.DEBUG = 'mongo-seeding';
 const { Seeder } = require('mongo-seeding');
 const path = require('path');
@@ -8,6 +7,7 @@ const path = require('path');
 const envFiles = {
   development: '.env',
   test: '.env.test',
+  production: '.env.prod'
 };
 
 // eslint-disable-next-line import/no-unresolved

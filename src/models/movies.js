@@ -10,9 +10,9 @@ const MoviesSchema = new mongoose.Schema({
   },
   duration: { type: String, required: true },
   minimunAge: { type: Number, required: true },
-  poster: { type: String, required: true },
+  poster: { type: String, required: false },
   video: { type: String, required: true },
-  image: { type: String, required: true },
+  image: { type: String, required: false },
   description: {
     sv: { type: String, required: true },
     es: { type: String, required: true },

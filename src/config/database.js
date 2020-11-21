@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const envFiles = {
   development: '.env',
   test: '.env.test',
+  production: '.env.prod'
 };
 
 require('dotenv').config({ path: envFiles[process.env.NODE_ENV] });

@@ -95,7 +95,7 @@ describe('Movies API test', () => {
       expect(body.description.es).to.equal(movieFromDB.description.es);
     });
 
-    it('should save return 400 if any data required is not sent in body request', async () => {
+    it('should return 400 if any data required is not sent in body request', async () => {
       await supertest(app)
         .post('/movies')
         .send({
@@ -116,7 +116,109 @@ describe('Movies API test', () => {
           }
 
         })
-        .expect(400, { message: 'please include title, director, actors, rated {sv, es}, duration, minimunAge, video, poster, image, description: {sv, es}, actors' });
+        .expect(400, { message: 'please include title, director, actors, rated {sv, es}, duration, minimunAge, video, description: {sv, es}, actors' });
+    });
+  });
+
+  describe('PATCH /movies/:movieId/image', () => {
+    it('should update image and poster of an specific movie', async () => {
+      const movie = new Movies({
+        title: 'Nelly Rapp - Monsteragent',
+        director: 'Amanda Adolfsson',
+        actors: 'Matilda Gross, Johan Rheborg, Marianne Mörck, Björn Gustafsson, Lily Wahlsteen',
+        rated: {
+          sv: 'Familj',
+          es: 'Familiar'
+        },
+        duration: '1:32 min',
+        minimunAge: 11,
+        poster: '',
+        video: 'https://www.youtube.com/embed/Z7LQTZnaSzk',
+        image: '',
+        description: {
+          sv: 'Nelly och hennes hund London ska tillbringa höstlovet hos sin morbror Hannibal. Men det visar sig att Hannibal inte lever det lugna liv som hon trott – han är en monsteragent! Nelly är snart omgiven av vampyrer, spöken, varulvar och Frankensteinare och dras in i ett gastkramande äventyr där allt hon tidigare trott på sätts på prov.',
+          es: 'Nelly y su perro London pasarán las vacaciones de otoño con su tío Hannibal. Pero resulta que Hannibal no vive la vida tranquila que ella pensaba: ¡es un agente monstruo! Nelly pronto se ve rodeada de vampiros, fantasmas, hombres lobo y Frankensteiners y se ve arrastrada a una aventura sin aliento donde todo en lo que creía anteriormente se pone a prueba.'
+        }
+      });
+      await movie.save();
+
+      const id = movie._id.toString();
+
+      const buffer = Buffer.from('Desktop/movie-image/image');
+
+      const response = await supertest(app)
+        .patch(`/movies/${id}/image`)
+        .attach('image', buffer, 'Nelly-Rapp.jpg')
+        .attach('image', buffer, 'Poster-Nelly-Rapp.jpg')
+        .set('Accept', 'application/form-data')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      const { body } = response;
+
+      expect(body.image).to.equal('https://storage.googleapis.com/cinema-cr-test/img-Nelly-Rapp.jpg');
+      expect(body.poster).to.equal('https://storage.googleapis.com/cinema-cr-test/img-Poster-Nelly-Rapp.jpg');
+    });
+
+    it('should return 400 if any image is send', async () => {
+      const movie = new Movies({
+        title: 'Nelly Rapp - Monsteragent',
+        director: 'Amanda Adolfsson',
+        actors: 'Matilda Gross, Johan Rheborg, Marianne Mörck, Björn Gustafsson, Lily Wahlsteen',
+        rated: {
+          sv: 'Familj',
+          es: 'Familiar'
+        },
+        duration: '1:32 min',
+        minimunAge: 11,
+        poster: '',
+        video: 'https://www.youtube.com/embed/Z7LQTZnaSzk',
+        image: '',
+        description: {
+          sv: 'Nelly och hennes hund London ska tillbringa höstlovet hos sin morbror Hannibal. Men det visar sig att Hannibal inte lever det lugna liv som hon trott – han är en monsteragent! Nelly är snart omgiven av vampyrer, spöken, varulvar och Frankensteinare och dras in i ett gastkramande äventyr där allt hon tidigare trott på sätts på prov.',
+          es: 'Nelly y su perro London pasarán las vacaciones de otoño con su tío Hannibal. Pero resulta que Hannibal no vive la vida tranquila que ella pensaba: ¡es un agente monstruo! Nelly pronto se ve rodeada de vampiros, fantasmas, hombres lobo y Frankensteiners y se ve arrastrada a una aventura sin aliento donde todo en lo que creía anteriormente se pone a prueba.'
+        }
+      });
+      await movie.save();
+
+      const id = movie._id.toString();
+      const buffer = Buffer.from('Desktop/movie-image/image');
+      await supertest(app)
+        .patch(`/movies/${id}/image`)
+        .set('Accept', 'application/form-data')
+        .attach('image', buffer, 'Nelly-Rapp.jpg')
+        .expect('Content-Type', /json/)
+        .expect(400, { message: 'please include 2 files under the name `image` (1.image and 2.poster in that order) as form-data format' });
+    });
+
+    it('should return 500 if any image is send', async () => {
+      const movie = new Movies({
+        title: 'Nelly Rapp - Monsteragent',
+        director: 'Amanda Adolfsson',
+        actors: 'Matilda Gross, Johan Rheborg, Marianne Mörck, Björn Gustafsson, Lily Wahlsteen',
+        rated: {
+          sv: 'Familj',
+          es: 'Familiar'
+        },
+        duration: '1:32 min',
+        minimunAge: 11,
+        poster: '',
+        video: 'https://www.youtube.com/embed/Z7LQTZnaSzk',
+        image: '',
+        description: {
+          sv: 'Nelly och hennes hund London ska tillbringa höstlovet hos sin morbror Hannibal. Men det visar sig att Hannibal inte lever det lugna liv som hon trott – han är en monsteragent! Nelly är snart omgiven av vampyrer, spöken, varulvar och Frankensteinare och dras in i ett gastkramande äventyr där allt hon tidigare trott på sätts på prov.',
+          es: 'Nelly y su perro London pasarán las vacaciones de otoño con su tío Hannibal. Pero resulta que Hannibal no vive la vida tranquila que ella pensaba: ¡es un agente monstruo! Nelly pronto se ve rodeada de vampiros, fantasmas, hombres lobo y Frankensteiners y se ve arrastrada a una aventura sin aliento donde todo en lo que creía anteriormente se pone a prueba.'
+        }
+      });
+      await movie.save();
+
+      const id = movie._id.toString();
+
+      await supertest(app)
+        .patch(`/movies/${id}/image`)
+        .set('Accept', 'application/form-data')
+        .expect('Content-Type', /json/)
+        .expect(500);
     });
   });
 });

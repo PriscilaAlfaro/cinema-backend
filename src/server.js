@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
 const express = require('express');
 const cors = require('cors');
+const multer = require('multer');
 const { connect } = require('./config/database');
+const checkFileType = require('./utils/ckeckFileType');
 
 const app = express();
 
@@ -12,6 +14,18 @@ const PORT = process.env.PORT || 4001;
 app.use(express.json());
 
 app.use(cors());
+
+const multerMid = multer({
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 5 * 1024 * 1024,
+  },
+  fileFilter(req, file, cb) {
+    checkFileType(req, file, cb);
+  },
+});
+
+app.use(multerMid.array('image', 2));
 
 const movies = require('./controllers/movies');
 const locations = require('./controllers/locations');
