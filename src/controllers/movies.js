@@ -1,11 +1,8 @@
 const express = require('express');
-const { format } = require('util');
 const Movies = require('../models/movies');
-const { storage } = require('../config/googleCloudStorage');
+const { uploadImagesToGoogleCloud } = require('../config/googleCloudStorage');
 
 const moviesRouter = express.Router();
-
-const bucket = storage().bucket(process.env.GOOGLE_CLOUD_BUCKET);
 
 moviesRouter.get('/', async (req, res) => {
   try {
@@ -75,49 +72,24 @@ moviesRouter.post('/', async (req, res) => {
 });
 
 moviesRouter.patch('/:movieId/image', async (req, res) => {
-  const { files } = req;
-
-  if (!bucket) {
-    res.status(400).send('Create a buckect in Google Cloud');
-  }
-
   try {
-    const promises = [];
-    if (files.length > 1) {
-      files.forEach((file) => {
-        const originalname = `img-${file.originalname}`;
-        const { buffer } = file;
-        const blob = bucket.file(originalname);
+    const { files } = req;
 
-        const promise = new Promise((resolve, reject) => {
-          const blobStream = blob.createWriteStream();
+    if (files.length === 2) {
+      const imagesArray = await uploadImagesToGoogleCloud(files);
 
-          blobStream.on('finish', async () => {
-            const publicUrl = format(
-              `https://storage.googleapis.com/${process.env.GOOGLE_CLOUD_BUCKET}/${blob.name}`
-            );
-            resolve(publicUrl);
-          });
-
-          blobStream.on('error', (error) => {
-            reject(error);
-          });
-
-          blobStream.end(buffer);
-        });
-
-        promises.push(promise);
-      });
-      const filePaths = await Promise.all(promises);
+      if (imagesArray.length === 0) {
+        return res.status(500).json({ message: 'please create a buckect in Google Cloud' });
+      }
 
       await Movies.updateOne({ _id: req.params.movieId },
-        { $set: { image: filePaths[0], poster: filePaths[1] } });
+        { $set: { image: imagesArray[0], poster: imagesArray[1] } });
 
-      res.json({ _id: req.params.movieId, image: filePaths[0], poster: filePaths[1] });
+      return res.json({ _id: req.params.movieId, image: imagesArray[0], poster: imagesArray[1] });
     }
-    res.status(400).json({ message: 'please include 2 files under the name `image` (1.image and 2.poster in that order) as form-data format' });
+    return res.status(400).json({ message: 'please include 2 files under the name `image` (1.image and 2.poster in that order) as form-data format' });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    return res.status(500).json({ message: error.message });
   }
 });
 

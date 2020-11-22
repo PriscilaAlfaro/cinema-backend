@@ -121,7 +121,7 @@ describe('Movies API test', () => {
   });
 
   describe('PATCH /movies/:movieId/image', () => {
-    it('should update image and poster of an specific movie', async () => {
+    it('should 500 when user do not have a bucket', async () => {
       const movie = new Movies({
         title: 'Nelly Rapp - Monsteragent',
         director: 'Amanda Adolfsson',
@@ -146,21 +146,16 @@ describe('Movies API test', () => {
 
       const buffer = Buffer.from('Desktop/movie-image/image');
 
-      const response = await supertest(app)
+      await supertest(app)
         .patch(`/movies/${id}/image`)
         .attach('image', buffer, 'Nelly-Rapp.jpg')
         .attach('image', buffer, 'Poster-Nelly-Rapp.jpg')
         .set('Accept', 'application/form-data')
         .expect('Content-Type', /json/)
-        .expect(200);
-
-      const { body } = response;
-
-      expect(body.image).to.equal('https://storage.googleapis.com/cinema-cr-test/img-Nelly-Rapp.jpg');
-      expect(body.poster).to.equal('https://storage.googleapis.com/cinema-cr-test/img-Poster-Nelly-Rapp.jpg');
+        .expect(500, { message: 'please create a buckect in Google Cloud' });
     });
 
-    it('should return 400 if any image is send', async () => {
+    it('should return 400 if only one image is sent', async () => {
       const movie = new Movies({
         title: 'Nelly Rapp - Monsteragent',
         director: 'Amanda Adolfsson',
