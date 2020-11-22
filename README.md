@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/PriscilaAlfaro/cinema/workflows/cinema-backend-build/badge.svg)](https://github.com/PriscilaAlfaro/cinema/actions)
+
 # Cinema CR
 
 # backend
