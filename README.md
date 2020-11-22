@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/PriscilaAlfaro/cinema/workflows/cinema-backend-build/badge.svg)](https://github.com/PriscilaAlfaro/cinema/actions)
+[![Actions Status](https://github.com/PriscilaAlfaro/cinema-backend/workflows/cinema-backend-build/badge.svg)](https://github.com/PriscilaAlfaro/cinema-backend/actions)
 
 # Cinema CR
 
