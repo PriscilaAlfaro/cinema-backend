@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const express = require('express');
 const sgMail = require('@sendgrid/mail');
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 const Handlebars = require('handlebars');
 const Order = require('../models/order');
@@ -14,30 +14,28 @@ const orderRouter = express.Router();
 // email based on language
 const buildEmailContent = async (name, movie, location, place, salong, date,
   screening, seatNumber, totalPrice, language) => {
-  const context = {
-    name: name.split(' ')[0],
-    movie,
-    location,
-    place,
-    salong,
-    date,
-    screening,
-    seatNumber,
-    totalPrice,
-    language
+  try {
+    const context = {
+      name: name.split(' ')[0],
+      movie,
+      location,
+      place,
+      salong,
+      date,
+      screening,
+      seatNumber,
+      totalPrice,
+      language
 
-  };
-  const readData = (error, data) => {
-    if (error) {
-      console.log(error);
-      return error;
-    }
-    const template = Handlebars.compile(data.toString());
+    };
+
+    const html = await fs.readFile(path.join(__dirname, `../emailTemplate/tickets-${language}.html`));
+    const template = Handlebars.compile(html.toString());
     const compiledHTML = template(context);
     return compiledHTML;
-  };
-
-  await fs.readFile(path.join(__dirname, `../emailTemplate/tickets-${language}.html`), readData);
+  } catch (error) {
+    return error;
+  }
 };
 
 orderRouter.get('/:orderId', async (req, res) => {
@@ -186,14 +184,13 @@ orderRouter.post('/', async (req, res) => {
             to: email,
             from: 'priscilahistoria@gmail.com',
             subject: 'Cinema CR Tickets',
-            text: 'Ticket details',
+            text: 'Cinema CR Tickets',
 
-            html: buildEmailContent(name, movie, location, place, salong, date,
+            html: await buildEmailContent(name, movie, location, place, salong, date,
               screening, seatNumber, totalPrice, language),
           };
-          sgMail.send(msg).then((r) => {
-            console.log('Email sent', r);
-          });
+          const emailResponse = await sgMail.send(msg);
+          console.log('Email sent', emailResponse);
         }
 
         return res.send({ ...order.toObject(), updatedPurchasedSeats: 'success' });
