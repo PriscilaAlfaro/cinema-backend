@@ -3,7 +3,7 @@
 # Cinema CR
 
 # backend
-
+Install dependencies `npm install`
 Starts with `npm run dev`
 Runs on Port 4001
 
@@ -51,7 +51,8 @@ Runs on Port 4001
     paymentReference: string,
     paymentStatus: string,
     purchaseDate: Date,
-    availability_id: ObjectId, }
+    availability_id: ObjectId, 
+    language: string}
 
 2. Read ( get order by Id)
    Route: GET '/order/:orderId'
@@ -90,6 +91,15 @@ To insert/update all data in database:
 2. npm run seedDb
 
 # Google Cloud Storage(GCS) Setup
+Google Cloud Storage(GCS) is a RESTful online file storage web service for storing and accessing data on Google Cloud Platform infrastructure.
+
+######Setup
+
+1. Follow link (https://cloud.google.com/storage/docs/introduction) to set up a GCS account.
+2. npm i @google-cloud/storage
+3. Create a GCP account and enable GCS.
+4. Create a project, service account and Bucket.
+5. Provide GOOGLE_CLOUD_BUCKET, GOOGLE_CLOUD_PROJECT_ID,GOOGLE_CLOUD_CLIENT_EMAIL and GOOGLE_CLOUD_PRIVATE_KEY in `.env` file.
 
 
 ## Tech
@@ -98,7 +108,7 @@ We are using a number of open source tools:
 
 - [Express] - A JavaScript library for building user interfaces.
 - [Sengrid] - A cloud-based email delivery platform.
-- [Stripe] - A payment platform to accept and process payments online.
+- [Stripe-testmode] - A payment platform to accept and process payments online.
 
 
 # Cinema backend
@@ -112,7 +122,6 @@ We are using a number of open source tools:
 
 
 ####MongoSetup  
-
 
 - Follow the [MongoDB Atlas registration link](https://www.mongodb.com/cloud/atlas/register).
 - Fill all mandatory fields and click create account button.

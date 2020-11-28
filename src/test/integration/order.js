@@ -34,6 +34,7 @@ describe('Order API test', () => {
         paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
         paymentStatus: 'pending',
         purchaseDate: new Date().toISOString(),
+        language: 'sv'
       });
       await order.save();
 
@@ -64,6 +65,7 @@ describe('Order API test', () => {
       expect(body.paymentReference).to.equal('ch_1HiCaI2eZvKYlo2CsnhbyVsJ');
       expect(body.paymentStatus).to.equal('pending');
       expect(body.purchaseDate).to.equal(order.purchaseDate.toISOString());
+      expect(body.language).to.equal('sv');
     });
 
     it('should return `order id does not exist` if orderId were not found', async () => {
@@ -89,6 +91,7 @@ describe('Order API test', () => {
         paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
         paymentStatus: 'pending',
         purchaseDate: new Date().toISOString(),
+        language: 'sv'
       });
       await order.save();
 
@@ -133,6 +136,7 @@ describe('Order API test', () => {
           paymentStatus: 'pending',
           purchaseDate: new Date().toISOString(),
           availability_id: seatAvailability._id,
+          language: 'sv'
         })
         .expect(200);
 
@@ -185,6 +189,7 @@ describe('Order API test', () => {
           paymentStatus: 'pending',
           purchaseDate: new Date().toISOString(),
           availability_id: '123abc',
+          language: 'sv'
         })
         .expect(400, {
           message: 'please include name, email, location_id, location, movie_id, movie, date_id, date, screening_id, screening,  place, salong, price,totalPrice, seatNumber, paymentReference, paymentStatus, purchaseDate',
@@ -216,6 +221,7 @@ describe('Order API test', () => {
         paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
         paymentStatus: 'pending',
         purchaseDate: new Date().toISOString(),
+        language: 'sv'
       });
       await order.save();
       const response = await supertest(app)
@@ -252,6 +258,7 @@ describe('Order API test', () => {
         paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
         paymentStatus: 'pending',
         purchaseDate: new Date().toISOString(),
+        language: 'sv'
       });
       await order.save();
       await supertest(app)
@@ -284,6 +291,7 @@ describe('Order API test', () => {
         paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
         paymentStatus: 'pending',
         purchaseDate: new Date().toISOString(),
+        language: 'sv'
       });
       await order.save();
       await supertest(app)
@@ -323,6 +331,7 @@ describe('Order API test', () => {
         paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
         paymentStatus: 'pending',
         purchaseDate: new Date().toISOString(),
+        language: 'sv'
       });
       await order.save();
 
@@ -358,6 +367,7 @@ describe('Order API test', () => {
         paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
         paymentStatus: 'pending',
         purchaseDate: new Date().toISOString(),
+        language: 'sv'
       });
       const seatAvailability = new SeatAvailability({
         screening_id: '5f9d5d2a7f933a1dcba88a26',
@@ -395,6 +405,7 @@ describe('Order API test', () => {
         paymentReference: 'ch_1HiCaI2eZvKYlo2CsnhbyVsJ',
         paymentStatus: 'pending',
         purchaseDate: new Date().toISOString(),
+        language: 'sv'
       });
       await order.save();
       await supertest(app)
