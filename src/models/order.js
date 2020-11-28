@@ -19,6 +19,7 @@ const OrderSchema = new mongoose.Schema({
   paymentReference: { type: String, required: true },
   paymentStatus: { type: String, required: true },
   purchaseDate: { type: Date, required: true },
+  language: { type: String, required: true },
 });
 
 module.exports = mongoose.model('Order', OrderSchema);

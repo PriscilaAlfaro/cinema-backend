@@ -4,9 +4,12 @@ const SeatAvailability = require('../models/seatAvailability');
 const seatAvailabilityRouter = express.Router();
 
 seatAvailabilityRouter.get('/:screeningId', async (req, res) => {
-  const { screeningId } = req.params;
   try {
-    const seatAvailability = await SeatAvailability.findOne({ screening_id: screeningId });
+    const { screeningId } = req.params;
+
+    const seatAvailability = await SeatAvailability
+      .findOne({ screening_id: screeningId });
+
     if (!seatAvailability) {
       return res.status(404).json({ message: 'screeningId does not exist' });
     }

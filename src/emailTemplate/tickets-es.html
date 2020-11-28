@@ -1,0 +1,70 @@
+<html lang="es">
+
+<head>
+    <title>Detalle de sus entradas</title>
+</head>
+
+<body>
+    <h2 style="font-size: 1.5em; color: white; background-color: rgb(39, 7, 90); padding: 20px; margin: 0px">Cinema CR
+    </h2>
+    <h2>Hola {{name}}</h2>
+    <h3>Puede encontrar detalles sobre su compra en Cinema CR aquí:</h2>
+        <h2>Detalle de sus entradas</h2>
+        <hr />
+        <div>
+            <div style="text-align: center;">
+                <table style="background-color: rgb(175, 168, 235); border-spacing: 0;">
+                    <tbody style="font-size: 1em; padding: 20px">
+                        <tr>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Película</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Localización</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Lugar</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Sala</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Fecha</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Hora</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Entradas</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Número de asientos</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Total</strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="justify-content: center;">{{movie}}</td>
+                            <td style="justify-content: center; ">{{location}}</td>
+                            <td style="justify-content: center; ">{{place}}</td>
+                            <td style="justify-content: center; ">{{salong}}</td>
+                            <td style="justify-content: center;">{{date}}</td>
+                            <td style="justify-content: center; ">{{screening}}</td>
+                            <td style="justify-content: center; ">{{seatNumber.length}}</td>
+                            <td style="justify-content: center; ">{{seatNumber}}</td>
+                            <td style="justify-content: center; ">{{totalPrice}} kr</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h5>Si tiene algún problema con su compra, escriba a cinema_cr@outlook.com</h5>
+        <h3>Gracias por tu compra en Cinema CR!</h3>
+        <h2>Disfruta tu película!</h2>
+        <hr />
+</body>
+
+</html>

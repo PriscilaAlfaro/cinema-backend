@@ -19,5 +19,6 @@
     ],
     "paymentReference": "ch_1HiCaI2eZvKYlo2CsnhbyVsJ",
     "paymentStatus": "success",
-    "purchaseDate": "15/11/2020"
+    "purchaseDate": "15/11/2020",
+    "language": "es"
 }

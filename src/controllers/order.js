@@ -1,6 +1,9 @@
 /* eslint-disable no-console */
 const express = require('express');
 const sgMail = require('@sendgrid/mail');
+const fs = require('fs');
+const path = require('path');
+const Handlebars = require('handlebars');
 const Order = require('../models/order');
 const SeatAvailability = require('../models/seatAvailability');
 
@@ -8,73 +11,34 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const orderRouter = express.Router();
 
-const buildEmailContent = (name, movie, location, place, salong, date, screening, seatNumber, totalPrice) => `<html lang="en">
-            <head>
-             <title>Ticket details</title>
-           </head >
-            <body> 
-              <h2 style="font-size: 1.5em; color: white; background-color: rgb(39, 7, 90); padding: 20px; margin: 0px">Cinema CR
-              </h2>
-              <h2>Hi ${name}</h2>
-               <h3> You can find details about your purchase in Cinema CR here:</h2>
-               <h2>Ticket details</h2>
-                 <hr />
-                   <div>
-                      <div style="text-align: center;">
-                                  <table style="background-color: rgb(175, 168, 235); border-spacing: 0;">
-                                      <tbody style="font-size: 1em; padding: 20px">
-                                          <tr>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Movie</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Location</strong>
-                                              </td>
-                                               <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Place</strong>
-                                              </td>
-                                               <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Cinema room</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Date</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Hour</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Tickets</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Seat Number</strong>
-                                              </td>
-                                              <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
-                                                  <strong>Total</strong>
-                                              </td>
-                                           
-                                          </tr>
-                                          <tr>
-                                              <td style="justify-content: center;">${movie}</td>
-                                              <td style="justify-content: center; ">${location}</td>
-                                              <td style="justify-content: center; ">${place}</td>
-                                              <td style="justify-content: center; ">${salong}</td>
-                                              <td style="justify-content: center;">${date}</td>
-                                              <td style="justify-content: center; ">${screening}</td>
-                                              <td style="justify-content: center; ">${seatNumber.length}</td>
-                                              <td style="justify-content: center; ">${seatNumber}</td>
-                                              <td style="justify-content: center; ">${totalPrice} kr</td>
-                                              
-                                          </tr>
-                                      </tbody>
-                                  </table>
-                              </div>
-                          </div>
-                          <h5>If you have any problem with your purchase please write to cinema_cr@outlook.com</h5>
-                          <h3>Thanks for your purchase in Cinema CR!</h3>
-                          <h2>Enjoy your movie!</h2>
-                          <hr/>
-                      </body>
-                     </html >`;
+// email based on language
+const buildEmailContent = async (name, movie, location, place, salong, date,
+  screening, seatNumber, totalPrice, language) => {
+  const context = {
+    name: name.split(' ')[0],
+    movie,
+    location,
+    place,
+    salong,
+    date,
+    screening,
+    seatNumber,
+    totalPrice,
+    language
+
+  };
+  const readData = (error, data) => {
+    if (error) {
+      console.log(error);
+      return error;
+    }
+    const template = Handlebars.compile(data.toString());
+    const compiledHTML = template(context);
+    return compiledHTML;
+  };
+
+  await fs.readFile(path.join(__dirname, `../emailTemplate/tickets-${language}.html`), readData);
+};
 
 orderRouter.get('/:orderId', async (req, res) => {
   try {
@@ -138,7 +102,8 @@ orderRouter.post('/', async (req, res) => {
     paymentReference,
     paymentStatus,
     purchaseDate,
-    availability_id
+    availability_id,
+    language
   } = req.body;
 
   try {
@@ -162,6 +127,7 @@ orderRouter.post('/', async (req, res) => {
       && paymentStatus
       && purchaseDate
       && availability_id
+      && language
     ) {
       // data base ------------------------
 
@@ -184,8 +150,10 @@ orderRouter.post('/', async (req, res) => {
         paymentReference,
         paymentStatus,
         purchaseDate,
-        availability_id
+        availability_id,
+        language
       });
+
       // case order have seatNumber
       if (seatNumber.length > 0) {
         const purchasedSeatsfromDB = await SeatAvailability.findOne({
@@ -220,8 +188,8 @@ orderRouter.post('/', async (req, res) => {
             subject: 'Cinema CR Tickets',
             text: 'Ticket details',
 
-            html: buildEmailContent(name, movie, location, place, salong, date, screening,
-              seatNumber, totalPrice, purchaseDate),
+            html: buildEmailContent(name, movie, location, place, salong, date,
+              screening, seatNumber, totalPrice, language),
           };
           sgMail.send(msg).then((r) => {
             console.log('Email sent', r);
@@ -267,14 +235,13 @@ orderRouter.delete('/:sessionId', async (req, res) => {
       (seatFromDB) => !userSelectedSeats.includes(seatFromDB)
     );
 
-    // both deletions are mede together after validation
+    // both deletions are made together after validation
     await Order.deleteOne({ _id: order._id });
     await SeatAvailability.updateOne(
       { _id: seatsfromDB._id },
       { $set: { purchasedSeats: finalSeats } }
     );
     return res.status(204).send();
-    // }
   } catch (error) {
     return res.status(500).send({ message: error.message });
   }

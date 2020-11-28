@@ -1,0 +1,70 @@
+<html lang="sv">
+
+<head>
+    <title>Biljettinformation</title>
+</head>
+
+<body>
+    <h2 style="font-size: 1.5em; color: white; background-color: rgb(39, 7, 90); padding: 20px; margin: 0px">Cinema CR
+    </h2>
+    <h2>Hej {{name}}</h2>
+    <h3> Du hittar information om ditt köp i Cinema CR här:</h2>
+        <h2>Biljettinformation</h2>
+        <hr />
+        <div>
+            <div style="text-align: center;">
+                <table style="background-color: rgb(175, 168, 235); border-spacing: 0;">
+                    <tbody style="font-size: 1em; padding: 20px">
+                        <tr>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Film</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Stad</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Plats</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Salong</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Datum</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Timm</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Biljetter</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Sitsnummer</strong>
+                            </td>
+                            <td style="font-size: 1em; padding: 10px 15px; justify-content: center;">
+                                <strong>Total</strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="justify-content: center;">{{movie}}</td>
+                            <td style="justify-content: center; ">{{location}}</td>
+                            <td style="justify-content: center; ">{{place}}</td>
+                            <td style="justify-content: center; ">{{salong}}</td>
+                            <td style="justify-content: center;">{{date}}</td>
+                            <td style="justify-content: center; ">{{screening}}</td>
+                            <td style="justify-content: center; ">{{seatNumber.length}}</td>
+                            <td style="justify-content: center; ">{{seatNumber}}</td>
+                            <td style="justify-content: center; ">{{totalPrice}} kr</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h5>Om du har några problem med ditt köp, skriv till cinema_cr@outlook.com</h5>
+        <h3>Tack för ditt köp i Cinema CR!</h3>
+        <h2>Njut av din film!</h2>
+        <hr />
+</body>
+
+</html>
