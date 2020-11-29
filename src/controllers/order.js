@@ -193,8 +193,11 @@ orderRouter.patch('/:sessionId', async (req, res) => {
             order.place, order.salong, order.date, order.screening, order.seatNumber,
             order.totalPrice, order.language),
         };
-        const emailResponse = await sgMail.send(msg);
-        console.log('Email sent', emailResponse);
+
+        if (process.env.NODE_ENV !== 'test') {
+          const emailResponse = await sgMail.send(msg);
+          console.log('Email sent', emailResponse);
+        }
       }
       // --------------------------
 

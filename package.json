@@ -49,7 +49,6 @@
     "nodemon": "^2.0.6",
     "supertest": "^6.0.1",
     "nyc": "^15.1.0",
-    "coveralls": "^3.1.0",
     "mongo-seeding": "^3.4.1"
   }
 }

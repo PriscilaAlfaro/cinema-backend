@@ -224,15 +224,16 @@ describe('Order API test', () => {
         language: 'sv'
       });
       await order.save();
+
       const response = await supertest(app)
         .patch(`/order/${order.paymentReference}`)
         .send({
-          newPaymentStatus: 'succes',
-        });
+          newPaymentStatus: 'success',
+        }).expect(200);
 
       const body = response.body.order;
       const foundUpdatedOrder = await Order.findOne({ _id: body._id });
-      expect(foundUpdatedOrder.paymentStatus).to.equal('succes');
+      expect(foundUpdatedOrder.paymentStatus).to.equal('success');
     });
 
     it('should return `sessionId does not exist` if no match found for patch', async () => {
