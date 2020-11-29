@@ -26,9 +26,9 @@ stripeRouter.post('/create-checkout-session', async (req, res) => {
         ],
         mode: 'payment',
         success_url:
-          'http://localhost:3000/thanks?session_id={CHECKOUT_SESSION_ID}',
+          `${process.env.SITE_URL}/thanks?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url:
-          'http://localhost:3000/cancelled?session_id={CHECKOUT_SESSION_ID}',
+          `${process.env.SITE_URL}/cancelled?session_id={CHECKOUT_SESSION_ID}`,
         customerEmail: email,
       });
 
