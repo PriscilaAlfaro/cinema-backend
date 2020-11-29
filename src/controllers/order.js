@@ -11,33 +11,6 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const orderRouter = express.Router();
 
-// email based on language
-const buildEmailContent = async (name, movie, location, place, salong, date,
-  screening, seatNumber, totalPrice, language) => {
-  try {
-    const context = {
-      name: name.split(' ')[0],
-      movie,
-      location,
-      place,
-      salong,
-      date,
-      screening,
-      seatNumber,
-      totalPrice,
-      language
-
-    };
-
-    const html = await fs.readFile(path.join(__dirname, `../emailTemplate/tickets-${language}.html`));
-    const template = Handlebars.compile(html.toString());
-    const compiledHTML = template(context);
-    return compiledHTML;
-  } catch (error) {
-    return error;
-  }
-};
-
 orderRouter.get('/:orderId', async (req, res) => {
   try {
     const order = await Order.findOne({ _id: req.params.orderId });
@@ -48,34 +21,6 @@ orderRouter.get('/:orderId', async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ message: error.message });
-  }
-});
-
-orderRouter.patch('/:sessionId', async (req, res) => {
-  const { newPaymentStatus } = req.body;
-
-  try {
-    if (newPaymentStatus) {
-      const order = await Order.findOne({
-        paymentReference: req.params.sessionId,
-      });
-      if (!order) {
-        res.status(404).json({ message: 'sessionId does not exist' });
-      }
-      await Order.updateOne(
-        { _id: order._id },
-        { $set: { paymentStatus: newPaymentStatus } }
-      );
-
-      order.paymentStatus = newPaymentStatus;
-      return res.send({ order });
-    }
-    return res.status(400).json({
-      message:
-        'please include newPaymentStatus',
-    });
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
   }
 });
 
@@ -172,26 +117,11 @@ orderRouter.post('/', async (req, res) => {
         ];
 
         // order is save until the seats were checked to be update
-        const orderSaved = await order.save();
-        const availabilitySaved = await SeatAvailability.updateOne(
+        await order.save();
+        await SeatAvailability.updateOne(
           { _id: availability_id },
           { $set: { purchasedSeats: updatedPurchasedSeats } }
         );
-
-        // sengrid----email is sent until the information was saved
-        if (orderSaved && availabilitySaved) {
-          const msg = {
-            to: email,
-            from: 'priscilahistoria@gmail.com',
-            subject: 'Cinema CR Tickets',
-            text: 'Cinema CR Tickets',
-
-            html: await buildEmailContent(name, movie, location, place, salong, date,
-              screening, seatNumber, totalPrice, language),
-          };
-          const emailResponse = await sgMail.send(msg);
-          console.log('Email sent', emailResponse);
-        }
 
         return res.send({ ...order.toObject(), updatedPurchasedSeats: 'success' });
       }
@@ -203,6 +133,80 @@ orderRouter.post('/', async (req, res) => {
     });
   } catch (error) {
     return res.status(500).send({ message: error.message });
+  }
+});
+
+// email based on language to use in patch
+const buildEmailContent = async (name, movie, location, place, salong, date,
+  screening, seatNumber, totalPrice, language) => {
+  try {
+    const context = {
+      name: name.split(' ')[0],
+      movie,
+      location,
+      place,
+      salong,
+      date,
+      screening,
+      seatNumber,
+      totalPrice,
+      language
+
+    };
+
+    const html = await fs.readFile(path.join(__dirname, `../emailTemplate/tickets-${language}.html`));
+    const template = Handlebars.compile(html.toString());
+    const compiledHTML = template(context);
+    return compiledHTML;
+  } catch (error) {
+    return error;
+  }
+};
+
+// Here we update the status of the order and send the email when user pay
+orderRouter.patch('/:sessionId', async (req, res) => {
+  const { newPaymentStatus } = req.body;
+
+  try {
+    if (newPaymentStatus) {
+      const order = await Order.findOne({
+        paymentReference: req.params.sessionId,
+      });
+      if (!order) {
+        res.status(404).json({ message: 'sessionId does not exist' });
+      }
+
+      const orderUpdated = await Order.updateOne(
+        { _id: order._id },
+        { $set: { paymentStatus: newPaymentStatus } }
+      );
+
+      // sengrid----email is sent until the information was found and updated
+      if (order && orderUpdated) {
+        const msg = {
+          to: order.email,
+          from: 'priscilahistoria@gmail.com',
+          subject: 'Cinema CR Tickets',
+          text: 'Cinema CR Tickets',
+
+          html: await buildEmailContent(order.name, order.movie, order.location,
+            order.place, order.salong, order.date, order.screening, order.seatNumber,
+            order.totalPrice, order.language),
+        };
+        const emailResponse = await sgMail.send(msg);
+        console.log('Email sent', emailResponse);
+      }
+      // --------------------------
+
+      order.paymentStatus = newPaymentStatus;
+      return res.send({ order });
+    }
+    return res.status(400).json({
+      message:
+        'please include newPaymentStatus',
+    });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
   }
 });
 
